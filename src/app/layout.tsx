@@ -3,11 +3,11 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog-test",
   description: "Unlock Knowledge with Our Featured Articles",
   openGraph: {
-    title: "Implenia",
-    description: "WE ARE LOOKING FOR YOUR IDEA",
+    title: "Blog-test",
+    description: "Unlock Knowledge with Our Featured Articles",
     images: [
       {
         url: "/meta-tag.png",

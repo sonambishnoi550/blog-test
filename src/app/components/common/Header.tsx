@@ -28,11 +28,11 @@ const Header = () => {
     return (
         <div className="sm:py-7 py-4 flex items-center bg-black">
             <div className="container max-w-[1220px] mx-auto px-4">
-                <div className="flex justify-between items-center lg:h-[100px] sm:h-20 rounded-[60px] border border-light-black px-10">
+                <div className="flex justify-between items-center lg:h-[100px] sm:h-20 rounded-[60px] border border-light-black lg:px-10 px-5 max-sm:py-2">
                     <Link href="/">
                         <Image src="/assets/images/webp/logo.webp"
                             alt="logo"
-                            className="max-w-[150.2px] pointer-events-none" width={150.2} height={44.6} />
+                            className="md:max-w-[150.2px] max-w-[109px] pointer-events-none" width={150.2} height={44.6} />
                     </Link>
                     <div className='lg:block hidden'>
                         <div className="flex gap-6 items-center">
@@ -40,11 +40,10 @@ const Header = () => {
                                 <a onClick={toggleMenu} key={index}
                                     className="font-normal hover:text-sky transition-all duration-700 text-base text-white/70"
                                     href={obj.id}> {obj.title} </a>))}
-
                         </div>
                     </div>
                     <div onClick={toggleMenu}
-                        className='menuIcon relative max-sm:w-[30px] max-sm:h-[24px] max-lg:w-[38px] max-lg:h-[28px] z-20 max-lg:flex max-lg:justify-between max-lg:flex-col max-lg:cursor-pointer transition ease-linear duration-700 lg:hidden'
+                        className='menuIcon relative max-sm:w-[30px] max-sm:h-5 max-lg:w-[38px] max-lg:h-7 z-20 max-lg:flex max-lg:justify-between max-lg:flex-col max-lg:cursor-pointer transition ease-linear duration-700 lg:hidden'
                     >
                         {isMenuOpen ? (
                             <>
@@ -70,10 +69,9 @@ const Header = () => {
                             </div>
                         </div>
                         <div className='flex max-md:flex-col gap-6'>
-                            <CustomButton myClass={'py-[13px] px-[15px]'} text={'Sign Up'} />
-                            <CustomButton myClass={'py-[13px] px-6'} text={'Login'} />
-                        </div>
-                        
+                            <CustomButton myClass={'py-[13px] md:px-[15px]'} text={'Sign Up'} />
+                            <CustomButton myClass={'py-[13px] md:px-6 px-10'} text={'Login'} />
+                        </div>   
                     </div>
                 </div>
             </div>

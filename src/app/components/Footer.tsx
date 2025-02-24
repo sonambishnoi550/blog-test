@@ -23,15 +23,15 @@ const Footer = () => {
               <p className='md:text-base text-sm text-white/70 font-semibold leading-6 pb-[10px] max-w-[1140px]'>Arrowtradefx.com is a website operated by Arrow Trade S.A.R.L, which is registered in: – Lebanon, Beirut, Barbour, Zrek Street, Najmat almazraa building, Eighth floor- company number 1028098. (Arrow trade offices: 2nd floor Hazmieh, Baabda Real Estate, Property 4370 sections 20/021, Beirut, Lebanon).</p>
               <p className='md:text-base text-sm text-white/70 font-semibold leading-6 pb-[50px] max-w-[1140px]'>Arrow Trade S.A.R.L (Lebanon) is the sole entity authorized to operate the MetaTrader platform under our license. No other companies are involved in the operation or management of our MetaTrader license.</p>
               <div className='flex gap-6 mb-20'>
-                  <a href="https://www.facebook.com/"><img src="/assets/images/svg/facebook.svg" alt="facebook" /></a>
-                  <a href="https://www.instagram.com/"><img src="/assets/images/svg/instagram.svg" alt="instagram" /></a>
-                  <a href="https://www.youtube.com/"><img src="/assets/images/svg/youtube.svg" alt="youtube" /></a>
-                  <a href=""><img src="/assets/images/svg/music.svg" alt="music" /></a>
-                  <a href="https://x.com/?lang=en"><img src="/assets/images/svg/twitter.svg" alt="twitter" /></a>
-                  <a href="https://in.linkedin.com/"><img src="/assets/images/svg/linkedin.svg" alt="linkedin" /></a>
+                  <a href="https://www.facebook.com/"><img src="/assets/images/svg/facebook.svg" alt="facebook"/></a>
+                  <a href="https://www.instagram.com/"><img src="/assets/images/svg/instagram.svg" alt="instagram"/></a>
+                  <a href="https://www.youtube.com/"><img src="/assets/images/svg/youtube.svg" alt="youtube"/></a>
+                  <a href=""><img src="/assets/images/svg/music.svg" alt="music"/></a>
+                  <a href="https://x.com/?lang=en"><img src="/assets/images/svg/twitter.svg" alt="twitter"/></a>
+                  <a href="https://in.linkedin.com/"><img src="/assets/images/svg/linkedin.svg" alt="linkedin"/></a>
               </div>
           </div>
-          <div className='w-full border border-light-black '></div>
+          <div className='w-full border border-light-black'></div>
           <p className=" mt-1 md:text-base text-sm font-normal leading-6 text-center text-white pb-4 px-4">
               Copyright © {year} Implenia. Alle Rechte vorbehalten.
           </p>

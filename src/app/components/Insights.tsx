@@ -17,7 +17,7 @@ const Insights = () => {
             <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[631px] pt-4 pb-[50px]'>Advanced algorithms can synthesize historical data with current market trends to forecast potential outcomes, offering the insights of seasoned market experts at your fingertips.</p>
             <Image src="/assets/images/webp/_market-insight.webp"
               alt="rmarket-insight"
-              className="max-w-[635px] w-full object-cover pointer-events-none pb-[190px]" width={635} height={550} />
+              className="max-w-[635px] w-full object-cover pointer-events-none pb-[190px]" width={635} height={550}/>
             <h2 className='text-white md:text-5xl text-4xl md:leading-custom-5xl font-normal max-w-[450px] pb-[30px]'>How AI-Driven Market insights are
               <span className='text-sky font-semibold'> changing the Game</span></h2>
             <h5 className='text-xl font-semibold leading-custom-md text-white'>1. Faster Decision-Making</h5>
@@ -28,13 +28,13 @@ const Insights = () => {
             <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[631px] pt-4 pb-[50px]'>AI-driven analytics can tailor insights to your specific trading or investment strategy. Whether you’re a day trader looking for short-term opportunities or a long-term investor analyzing market fundamentals, AI can filter out irrelevant information and deliver insights that align with your goals. This level of personalization was previously unavailable in traditional market research.</p>
             <Image src="/assets/images/webp/ai-driven.webp"
               alt="rmarket-insight"
-              className="max-w-[635px] w-full object-cover pointer-events-none pb-[190px]" width={635} height={550} />
+              className="max-w-[635px] w-full object-cover pointer-events-none pb-[190px]" width={635} height={550}/>
           </div>
           <div className='border border-sky rounded-3xl py-[30px] max-w-[364px] h-[525px]'>
             <div className='flex items-center gap-[10px] pl-5 pb-6'>
               <Image src="/assets/images/webp/darrell.webp"
                 alt="darrell"
-                className="size-[50px] object-cover pointer-events-none" width={50} height={50} />
+                className="size-[50px] object-cover pointer-events-none" width={50} height={50}/>
               <p className='text-white font-semibold text-base leading-6'>Darrell Steward</p>
             </div>
             <h5 className='text-white text-base font-semibold leading-5 px-5'>What are AI-Driven Market Insights?</h5>
