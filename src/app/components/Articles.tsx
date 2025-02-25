@@ -22,7 +22,6 @@ const LatestArticle = () => {
                     spaceBetween={20}
                     slidesPerView={1.2}
                     loop={true}
-                    centeredSlides={true}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                     navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
                     breakpoints={{

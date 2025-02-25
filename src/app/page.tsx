@@ -4,7 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Hero from "./components/Hero";
 import Insights from "./components/Insights"
 import Footer from "./components/Footer";
-import Articles from "./components/Related";
+import Articles from "./components/Articles";
 
 const Page = () => {
   const router = useRouter();

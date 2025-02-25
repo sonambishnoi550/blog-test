@@ -101,7 +101,7 @@ const NavBar = () => {
                                         }`}
                                 ></span>
                                 <span
-                                    className={`bg-white/70 rounded-full  w-[39px] h-1 block transition-all duration-300 ${open ? "-translate-x-10" : ""}`}
+                                    className={`bg-white/70 rounded-full w-[39px] h-1 block transition-all duration-300 ${open ? "-translate-x-10" : ""}`}
                                 ></span>
                             </button>
                         </div>

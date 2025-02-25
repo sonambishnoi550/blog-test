@@ -8,6 +8,7 @@ import { BLOGS_CARD } from "../utils/helper";
 
 interface HeroProps {
     pageIndex: number;
+
     onPageChange: (newPageIndex: number) => void;
 }
 
@@ -77,7 +78,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
     );
 
     return (
-        <div id="home" className="bg-center bg-cover bg-no-repeat pb-16 overflow-hidden bg-black relative">
+        <div id="home" className="bg-center bg-cover bg-no-repeat overflow-hidden bg-black relative">
             <Image className="absolute top-[5%] left-0 max-w-[237px]" src="/assets/images/webp/hero-top-image.webp" alt="top-image" width={237} height={237}/>
             <Image className="absolute right-0 bottom-[10%] max-w-[237px]" src="/assets/images/webp/hero-bottom-image.webp" alt="top-image" width={237} height={237} />
             <Header />
@@ -112,8 +113,8 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                                         <p className="text-white text-base font-semibold leading-custom-lg absolute top-4 right-4">{blog.date}</p>
                                         <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
                                         <div className="px-3 pb-[39px]">
-                                            <div className="flex gap-2 mb-2">
-                                                <span className="border-sky font-normal border rounded-full whitespace-nowrap leading-custom-lg hover:bg-sky hover:text-black transition-all duration-700 text-xs xl:px-[42px] px-6 h-[37px] py-[3px] flex items-center">{blog.category}</span>
+                                            <div className="flex gap-2 mb-2 -mt-7">
+                                                <span className="border-sky font-normal bg-black border rounded-full whitespace-nowrap leading-custom-lg hover:bg-sky hover:text-black transition-all duration-700 text-xs xl:px-[42px] px-6 h-[37px] py-[3px] flex items-center">{blog.category}</span>
                                                 <span className="text-white/70 bg-dark-gray hover:bg-sky hover:text-black transition-all duration-700 whitespace-nowrap font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full xl:px-[42px] px-6 py-[9.5px]">{blog.readTime} min read</span>
                                             </div>
                                             <h3 className="text-xl font-semibold">{blog.title}</h3>
