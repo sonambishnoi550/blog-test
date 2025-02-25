@@ -116,11 +116,14 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                                             </div>
                                             <h3 className="text-xl font-semibold">{blog.title}</h3>
                                             <p className="text-white/70 mb-3 font-normal leading-custom-lg text-base">{blog.description}</p>
+                                            <div className="flex justify-between items-center">
                                             <div className="flex items-center gap-2 mt-6">
                                                 <Image src={blog.authorImage} alt={blog.author} width={50} height={50} className="size-[50px] rounded-full" />
                                                 <p className="text-white text-base leading-custom-lg font-semibold">{blog.author}</p>
                                             </div>
-                                        </div>
+                                            <Image src="/assets/images/svg/sky-arrow.svg" alt="sky-arrow" width={20} height={18} className="mt-5 hover:translate-x-1 transition-all duration-500 ease-linear" />
+                                            </div>
+                                            </div>
                                     </div>
                                 </div>
                             ))}
@@ -130,7 +133,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                     )}
                     <button
                         onClick={() => handlePageChange(pageIndex + 1)}
-                        className="mt-6 bg-sky text-black hover:text-sky px-[26.7px] py-[14.6px] flex mx-auto rounded-full hover:bg-transparent border border-sky transition-all duration-500"
+                        className="mt-10 bg-sky text-black hover:text-sky px-[26.7px] py-[14.6px] flex mx-auto rounded-full hover:bg-transparent border border-sky transition-all duration-500"
                     >
                         See All Blogs
                     </button>

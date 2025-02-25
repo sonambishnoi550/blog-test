@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Hero from "./components/Hero";
+import Insights from "./components/Insights"
 
 const Page = () => {
   const router = useRouter();
@@ -21,6 +22,7 @@ const Page = () => {
   return (
     <div>
       <Hero pageIndex={pageIndex} onPageChange={handlePageChange} />
+      <Insights/>
     </div>
   );
 };

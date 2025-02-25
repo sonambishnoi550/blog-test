@@ -65,6 +65,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/darrell.webp",
         date: "31 Jan 2025",
         image: "/assets/images/webp/real-time.webp",
+        isFeatured: true, 
     },
     {
         id: 2,
@@ -76,6 +77,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/jerome.webp",
         date: "29 Jan 2025",
         image: "/assets/images/webp/advanced-trading.webp",
+        isFeatured: true, 
     },
     {
         id: 3,
@@ -87,6 +89,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/eleanor.webp",
         date: "20 Dec 2024",
         image: "/assets/images/webp/mastering.webp",
+        isFeatured: false, 
     },
     {
         id: 4,
@@ -98,6 +101,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/leslie.webp",
         date: "31 Jan 2025",
         image: "/assets/images/webp/risk.webp",
+        isFeatured: false, 
     },
     {
         id: 5,
@@ -109,6 +113,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/wade.webp",
         date: "29 Jan 2025",
         image: "/assets/images/webp/building.webp",
+        isFeatured: true, 
     },
     {
         id: 6,
@@ -120,6 +125,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/kristen.webp",
         date: "20 Dec 2024",
         image: "/assets/images/webp/trading.webp",
+        isFeatured: true, 
     },
 ];
 export const ARTICLES_DATA = [
