@@ -25,8 +25,8 @@ const Page = () => {
     <div>
       <Hero pageIndex={pageIndex} onPageChange={handlePageChange} />
       <Articles/>
-      <Insights />
-      <Footer/>
+      <Footer />
+      <Insights/>
     </div>
   );
 };

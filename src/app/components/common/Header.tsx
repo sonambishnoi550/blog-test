@@ -50,7 +50,7 @@ const NavBar = () => {
                             <p className="font-normal text-base">{obj.countryCode}</p>
                             <div className="flex items-center gap-2 bg-gray rounded-full py-1 pl-[11px] pr-4">
                                 <p className="font-normal text-base text-white">{obj.countryPin}</p>
-                                <div className={` rounded-full size-[10px] ${Number(obj.id) === 3 || Number(obj.id) === 6 ? "bg-green" : "bg-red"
+                                <div className={`rounded-full size-[10px] ${Number(obj.id) === 3 || Number(obj.id) === 6 ? "bg-green" : "bg-red"
                                     }`}></div>
                             </div>
                         </div>
@@ -85,8 +85,8 @@ const NavBar = () => {
                             ))}
                         </ul>
                         <div className='flex gap-6 max-lg:!hidden'>
-                            <CustomButton myClass={'py-[13px] md:px-4'} text={'Sign Up'} />
-                            <CustomButton myClass={'py-[13px] md:px-6 px-10'} text={'Login'} />
+                            <CustomButton myClass={'py-[13.5px] md:px-4'} text={'Sign Up'} />
+                            <CustomButton myClass={'py-[13.5px] md:px-6 px-10'} text={'Login'} />
                         </div>  
                         <div
                             className="lg:hidden z-50 cursor-pointer"

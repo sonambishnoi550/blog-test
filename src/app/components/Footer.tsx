@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='w-full border border-light-black'></div>
-            <p className="mt-1 md:text-base text-sm font-normal leading-6 text-center text-white pb-4 px-4">
+            <p className="md:text-base text-sm font-normal leading-6 text-center text-white py-4 px-4">
                 Copyright © {year} Implenia. Alle Rechte vorbehalten.
             </p>
         </div>
