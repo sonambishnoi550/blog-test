@@ -1,22 +1,28 @@
-"use client"
-import React from 'react'
-import Hero from './components/Hero'
-import Articles from './components/Articles'
-import Footer from './components/Footer'
-import Insights from './components/Insights'
-import Related from './components/Related'
-import SecondFooter from './components/SecondFooter'
-const page = () => {
-  return (
-    <>
-      <Hero />
-      <Articles />
-      <Footer />
-      <Insights />
-      <Related />
-     <SecondFooter/>
-    </>
-  )
-}
+"use client";
+import React, { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import Hero from "./components/Hero";
 
-export default page
+const Page = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const currentPage = searchParams.get("page") || "1";
+  const [pageIndex, setPageIndex] = useState(Number(currentPage));
+
+  useEffect(() => {
+    setPageIndex(Number(currentPage));
+  }, [currentPage]);
+
+  const handlePageChange = (newPageIndex: number) => {
+    router.push(`/blog?page=${newPageIndex}`, { scroll: false });
+    setPageIndex(newPageIndex);
+  };
+
+  return (
+    <div>
+      <Hero pageIndex={pageIndex} onPageChange={handlePageChange} />
+    </div>
+  );
+};
+
+export default Page;

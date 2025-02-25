@@ -2,48 +2,76 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import React from "react";
-import Header from "../components/common/Header";
+import Header from "./common/Header";
 import Image from "next/image";
 import { BLOGS_CARD } from "../utils/helper";
-import CustomButton from "./common/CustomButton";
 
-const Hero = () => {
+interface HeroProps {
+    pageIndex: number;
+    onPageChange: (newPageIndex: number) => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
     const router = useRouter();
     const searchParams = useSearchParams();
+    const pageQuery = Number(searchParams.get("page")) || 1;
+
     const [blogs, setBlogs] = useState(BLOGS_CARD);
-    const [pageIndex, setPageIndex] = useState(1);
     const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
         const storedBlogs = localStorage.getItem("blogsData");
-        const storedPageIndex = localStorage.getItem("pageIndex");
-
         if (storedBlogs) {
             setBlogs(JSON.parse(storedBlogs));
-        }
-
-        if (storedPageIndex) {
-            setPageIndex(Number(storedPageIndex));
+        } else {
+            localStorage.setItem("blogsData", JSON.stringify(BLOGS_CARD));
         }
     }, []);
 
-    const loadMoreBlogs = () => {
-        const newPageIndex = pageIndex + 1;
-        setPageIndex(newPageIndex);
-
-        router.push(`?page-${newPageIndex}`, { scroll: false });
+    const handlePageChange = (newIndex: number) => {
+        router.push(`/blog?page=${newIndex}`, { scroll: false });
 
         const newBlogs = [
-            { id: blogs.length + 1, title: `Real-Time Market Insights`, category: "Productivity", readTime: 5, description: "Stay ahead with AI-driven analytics, real-time news updates, and expert market research to make informed decisions.", author: "Jerome Bell", authorImage: "/assets/images/png/jerome.png", date: "31 Jan 2025", image: "/assets/images/webp/real-time.webp" },
-            { id: blogs.length + 2, title: `Advanced Trading Platform ${blogs.length + 2}`, category: "Productivity", readTime: 5, description: "Experience lightning-fast execution, customizable charts, and an intuitive interface designed for traders of all levels.", author: "Eleanor Pena", authorImage: "/assets/images/png/eleanor.png", date: "29 Jan 2025", image: "/assets/images/webp/advanced-trading.webp" },
-            { id: blogs.length + 3, title: `Mastering The Markets ${blogs.length + 3}`, category: "Productivity", readTime: 5, description: "Mastering the markets involves developing a comprehensive understanding of how financial markets work, creating.", author: "Wade Warren", authorImage: "/assets/images/png/wade.png", date: "20 Dec 2024", image: "/assets/images/webp/mastering.webp" },
+            {
+                id: blogs.length + 1,
+                title: `Real-Time Market Insights`,
+                category: "Productivity",
+                readTime: 5,
+                description: "Stay ahead with AI-driven analytics, real-time news updates, and expert market research to make informed decisions.",
+                author: "Jerome Bell",
+                authorImage: "/assets/images/webp/jerome.webp",
+                date: "31 Jan 2025",
+                image: "/assets/images/webp/real-time.webp",
+            },
+            {
+                id: blogs.length + 2,
+                title: `Advanced Trading Platform ${blogs.length + 2}`,
+                category: "Productivity",
+                readTime: 5,
+                description: "Experience lightning-fast execution, customizable charts, and an intuitive interface designed for traders of all levels.",
+                author: "Eleanor Pena",
+                authorImage: "/assets/images/webp/eleanor.webp",
+                date: "29 Jan 2025",
+                image: "/assets/images/webp/advanced-trading.webp",
+            },
+            {
+                id: blogs.length + 3,
+                title: `Mastering The Markets ${blogs.length + 3}`,
+                category: "Productivity",
+                readTime: 5,
+                description: "Mastering the markets involves developing a comprehensive understanding of how financial markets work, creating.",
+                author: "Wade Warren",
+                authorImage: "/assets/images/webp/wade.webp",
+                date: "20 Dec 2024",
+                image: "/assets/images/webp/mastering.webp",
+            },
         ];
 
         const updatedBlogs = [...blogs, ...newBlogs];
         setBlogs(updatedBlogs);
 
         localStorage.setItem("blogsData", JSON.stringify(updatedBlogs));
-        localStorage.setItem("pageIndex", newPageIndex.toString());
+        localStorage.setItem("pageIndex", newIndex.toString());
     };
 
     const filteredBlogs = blogs.filter(blog =>
@@ -51,7 +79,7 @@ const Hero = () => {
     );
 
     return (
-        <div id="home" className="bg-center bg-cover bg-no-repeat pb-16 overflow-hidden bg-hero-bg-image bg-black">
+        <div id="home" className="bg-center bg-cover bg-no-repeat pb-16 overflow-hidden bg-black bg-hero-bg-image max-sm:bg-black/20 relative">
             <Header />
             <div className="container max-w-[1220px] mx-auto px-4 relative z-20">
                 <div className="flex flex-col xl:pt-[170px] pt-[140px]">
@@ -63,7 +91,7 @@ const Hero = () => {
                     </p>
                     <form className="pt-[30px]">
                         <div className="flex gap-[10px] border border-white/20 py-[17px] pl-[30px] items-center max-w-[558px] mx-auto rounded-full">
-                            <Image src="/assets/images/svg/search-icon.svg" height={18} width={18} alt="search-icon" />
+                            <Image src="/assets/images/svg/search-icon.svg" height={18} width={18} alt="search-icon" className="stroke-white/70 inset-0" />
                             <input
                                 type="text"
                                 value={searchQuery}
@@ -75,21 +103,21 @@ const Hero = () => {
                     </form>
                 </div>
 
-                <div className="pt-[70px] ">
+                <div className="pt-[70px]">
                     {filteredBlogs.length > 0 ? (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1140px] mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1140px] mx-auto justify-center">
                             {filteredBlogs.map((blog) => (
-                                <div key={blog.id} className="bg-gradient-to-b from-sky/0 to-sky/100 p-[1px] rounded-[10px] w-full max-w-[366px]">
+                                <div key={blog.id} className="bg-gradient-to-b from-sky/0 to-sky/100 p-[1px] rounded-[10px] max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
                                     <div className="bg-black/90 text-white relative rounded-[10px]">
                                         <p className="text-white text-base font-semibold leading-custom-lg absolute top-4 right-4">{blog.date}</p>
                                         <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
                                         <div className="px-3 pb-[39px]">
-                                            <div className="flex gap-4 mb-2">
-                                                <span className="bg-black text-sm xl:px-10 px-6 py-[7px] rounded-full  border border-sky">{blog.category}</span>
-                                                <span className="text-white/70 font-normal leading-customlg text-sm border border-white rounded-full xl:px-10 px-6 py-[7px]">{blog.readTime} min read</span>
+                                            <div className="flex gap-2 mb-2">
+                                                <span className="border-sky border rounded-full leading-custom-lg hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
+                                                <span className="text-white/70 bg-light-black font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px]">{blog.readTime} min read</span>
                                             </div>
                                             <h3 className="text-xl font-semibold">{blog.title}</h3>
-                                            <p className="text-white/70 mb-3 font-normal leading-custom-lg text-base max-w-[323px]">{blog.description}</p>
+                                            <p className="text-white/70 mb-3 font-normal leading-custom-lg text-base">{blog.description}</p>
                                             <div className="flex items-center gap-2 mt-6">
                                                 <Image src={blog.authorImage} alt={blog.author} width={50} height={50} className="size-[50px] rounded-full" />
                                                 <p className="text-white text-base leading-custom-lg font-semibold">{blog.author}</p>
@@ -102,7 +130,12 @@ const Hero = () => {
                     ) : (
                         <p className="text-center text-white/70 text-xl mt-6">No blogs found</p>
                     )}
-                    <CustomButton custonOnClick={loadMoreBlogs} text='See All Blogs' myClass='py-[13px] px-6 flex mx-auto !text-black bg-sky mt-10' />
+                    <button
+                        onClick={() => handlePageChange(pageIndex + 1)}
+                        className="mt-6 bg-sky text-black hover:text-sky px-[26.7px] py-[14.6px] flex mx-auto rounded-full hover:bg-transparent border border-sky transition-all duration-500"
+                    >
+                        See All Blogs
+                    </button>
                 </div>
             </div>
         </div>

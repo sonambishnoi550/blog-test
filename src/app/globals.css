@@ -6,3 +6,7 @@
 body{
   font-family: 'inter',sans-serif;
 }
+#nprogress .bar {
+  background: black !important;
+  height: 4px !important;
+}
