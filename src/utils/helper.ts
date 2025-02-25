@@ -11,24 +11,24 @@ export const MARQUEE_DATA = [
     },
     {
         id: "3",
-        countryCode: "US30",
-        countryPin: "41048.38 / 41044.58",
-    },
-    {
-        id: "4",
         countryCode: "USDJPY",
         countryPin: "143.651 / 143.637",
     },
     {
-        id: "5",
+        id: "4",
         countryCode: "US30",
         countryPin: "41048.38 / 41044.58",
     },
     {
+        id: "5",
+        countryCode: "NAS100",
+        countryPin: "18948.45 / 18945.15",
+    },
+    {
         id: "6",
-        countryCode: "US30",
-        countryPin: "41048.38 / 41044.58",
-    }
+        countryCode: "USDJPY",
+        countryPin: "143.651 / 143.637",
+    },
 
 ]
 export const HEADER_LIST = [
@@ -65,7 +65,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/darrell.webp",
         date: "31 Jan 2025",
         image: "/assets/images/webp/real-time.webp",
-        isFeatured: true, 
+        isFeatured: true,
     },
     {
         id: 2,
@@ -77,7 +77,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/jerome.webp",
         date: "29 Jan 2025",
         image: "/assets/images/webp/advanced-trading.webp",
-        isFeatured: true, 
+        isFeatured: true,
     },
     {
         id: 3,
@@ -89,7 +89,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/eleanor.webp",
         date: "20 Dec 2024",
         image: "/assets/images/webp/mastering.webp",
-        isFeatured: true, 
+        isFeatured: false,
     },
     {
         id: 4,
@@ -101,7 +101,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/leslie.webp",
         date: "31 Jan 2025",
         image: "/assets/images/webp/risk.webp",
-        isFeatured: false, 
+        isFeatured: false,
     },
     {
         id: 5,
@@ -113,7 +113,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/wade.webp",
         date: "29 Jan 2025",
         image: "/assets/images/webp/building.webp",
-        isFeatured: true, 
+        isFeatured: true,
     },
     {
         id: 6,
@@ -125,45 +125,35 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/kristen.webp",
         date: "20 Dec 2024",
         image: "/assets/images/webp/trading.webp",
-        isFeatured: false, 
+        isFeatured: true,
     },
 ];
-export const ARTICLES_DATA = [
-        {
-            image: "/assets/images/webp/trading-strategy.webp",
-            category: "Productivity",
-            readTime: "8 min read",
-            title: "Developing a Trading Strategy",
-            description: "Identify trends (up, down, sideways) and develop strategies that capitalize on the direction of the market.",
-            authorImage: "/assets/images/webp/hawkins.webp",
-            authorName: "Guy Hawkins",
-        },
-        {
-            image: "/assets/images/webp/security.webp",
-            category: "Productivity",
-            readTime: "9 min read",
-            title: "Security & Reliability",
-            description: "Your investments are safe with robust encryption, multi-layer authentication, and secure transaction processing.",
-            authorImage: "/assets/images/webp/jones.webp",
-            authorName: "Jacob Jones",
-        },
-        {
-            image: "/assets/images/webp/mobile-trading.webp",
-            category: "Productivity",
-            readTime: "7 min read",
-            title: "Seamless Mobile Trading",
-            description: "Access your portfolio and trade on the go with a powerful mobile app designed for performance and ease of use.",
-            authorImage: "/assets/images/webp/henry.webp",
-            authorName: "Courtney Henry",
-        }
-];
-export const menuItems = ["Home", "About Us", "How It Works", "Testimonials", "FAQs", "Contact Us"];
 
-export const socialLinks = [
+export const NAV_LINKS = ["Home", "About Us", "How It Works", "Testimonials", "FAQs", "Contact Us"];
+
+export const DISCLAIMERS = [
+    {
+        title: "Trade Responsibility Disclaimer",
+        content: "Trading Forex and CFDs involves a high level of risk and may not be suitable for all investors. Leverage can work both for and against you, and it’s possible to lose more than your initial investment. Please ensure that you fully understand the risks involved, taking into account your financial objectives and risk appetite. Seek independent financial advice if necessary before starting trading. ArrowTrade does not offer financial advice.",
+        extraContent: "",
+    },
+    {
+        title: "Disclaimer",
+        content: "Information on this site is not directed at residents of any country or jurisdiction where distribution or use would be contrary to local law or regulation. Please check with your local regulations before proceeding.",
+        extraContent: "",
+    },
+    {
+        title: "Regulatory Information",
+        content: "Arrowtradefx.com is a website operated by Arrow Trade S.A.R.L, which is registered in: – Lebanon, Beirut, Barbour, Zrek Street, Najmat almazraa building, Eighth floor- company number 1028098. (Arrow trade offices: 2nd floor Hazmieh, Baabda Real Estate, Property 4370 sections 20/021, Beirut, Lebanon).",
+        extraContent: "Arrow Trade S.A.R.L (Lebanon) is the sole entity authorized to operate the MetaTrader platform under our license. No other companies are involved in the operation or management of our MetaTrader license.",
+    }
+];
+
+export const SOCIAL_LINKS = [
     { href: "https://www.facebook.com/", src: "/assets/images/svg/facebook.svg", alt: "facebook" },
     { href: "https://www.instagram.com/", src: "/assets/images/svg/instagram.svg", alt: "instagram" },
     { href: "https://www.youtube.com/", src: "/assets/images/svg/youtube.svg", alt: "youtube" },
-    { href: "", src: "/assets/images/svg/music.svg", alt: "music" },
+    { href: "https://open.spotify.com/", src: "/assets/images/svg/music.svg", alt: "music" },
     { href: "https://x.com/?lang=en", src: "/assets/images/svg/twitter.svg", alt: "twitter" },
-    { href: "https://in.linkedin.com/", src: "/assets/images/svg/linkedin.svg", alt: "linkedin" },
+    { href: "https://in.linkedin.com/", src: "/assets/images/svg/linkedin.svg", alt: "linkedin" }
 ];

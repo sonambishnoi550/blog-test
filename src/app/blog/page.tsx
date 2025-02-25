@@ -1,7 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import Hero from "../components/Hero";
+import Hero from "@/components/Hero";
+import Articles from "@/components/Articles";
+import Footer from "@/components/Footer";
+import { Suspense } from "react";
 
 const Page = () => {
     const router = useRouter();
@@ -20,7 +23,11 @@ const Page = () => {
 
     return (
         <div>
-            <Hero pageIndex={pageIndex} onPageChange={handlePageChange} />
+            <Suspense>
+                <Hero pageIndex={pageIndex} onPageChange={handlePageChange} />
+            </Suspense>
+            <Articles />
+            <Footer />
         </div>
     );
 };

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import React from "react";
-import Header from "../components/common/Header";
+import Header from "./common/Header";
 import Image from "next/image";
 import { BLOGS_CARD } from "../utils/helper";
 
@@ -40,9 +40,9 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                 readTime: 5,
                 description: "Stay ahead with AI-driven analytics, real-time news updates, and expert market research to make informed decisions.",
                 author: "Jerome Bell",
-                authorImage: "/assets/images/png/jerome.png",
+                authorImage: "/assets/images/webp/jerome.webp",
                 date: "31 Jan 2025",
-                image: "/assets/images/png/real-time.png",
+                image: "/assets/images/webp/real-time.webp",
                 isFeatured: true,
             },
             {
@@ -52,8 +52,8 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                 readTime: 5,
                 description: "Experience lightning-fast execution, customizable charts, and an intuitive interface designed for traders of all levels.",
                 author: "Eleanor Pena",
-                authorImage: "/assets/images/png/eleanor.png",
-                image: "/assets/images/png/trading.png",
+                authorImage: "/assets/images/webp/eleanor.webp",
+                image: "/assets/images/webp/trading.webp",
                 isFeatured: true,
                 date: "31 Jan 2025",
             },
@@ -64,8 +64,8 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                 readTime: 5,
                 description: "Mastering the markets involves developing a comprehensive understanding of how financial markets work, creating.",
                 author: "Wade Warren",
-                authorImage: "/assets/images/png/wade.png",
-                image: "/assets/images/png/mastring.png",
+                authorImage: "/assets/images/webp/wade.webp",
+                image: "/assets/images/webp/mastering.webp",
                 isFeatured: true,
                 date: "20 Dec 2024",
             },
@@ -96,10 +96,10 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
             <Header />
             <div className="container max-w-[1220px] mx-auto px-4 relative z-20">
                 <div className="flex flex-col xl:pt-[170px] pt-[140px]">
-                    <h1 className="md:mt-[15px] lg:text-customMd md:text-6xl text-customXmd font-normal text-white lg:max-w-[700px] max-w-[718px] mx-auto text-center max-lg:leading-customMd">
+                    <h1 className="md:mt-[15px] lg:text-custom-6xl md:text-6xl text-4xl font-normal text-white lg:max-w-[700px] max-w-[718px] mx-auto text-center max-lg:leading-customMd">
                         Unlock Knowledge with Our <span className="text-sky font-bold">Featured Articles</span>
                     </h1>
-                    <p className="font-normal md:text-base text-xs text-white/70 pt-4 leading-customXxmd max-w-[674px] mx-auto text-center">
+                    <p className="font-normal md:text-base text-xs text-white/70 pt-4 leading-custom-lg max-w-[674px] mx-auto text-center">
                         Explore our latest articles, insights, and expert advice on industry trends. Stay informed, gain new perspectives, and discover valuable tips to help you stay ahead.
                     </p>
                     <form className="pt-[30px]">
@@ -109,8 +109,8 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                placeholder="Search by title..."
-                                className="bg-transparent text-white/70 text-base font-normal leading-customXmd placeholder:text-white/70 outline-none"
+                                placeholder="Search"
+                                className="bg-transparent text-white/70 text-base font-normal leading-custom-lg placeholder:text-white/70 outline-none"
                             />
                         </div>
                     </form>
@@ -122,19 +122,19 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                             {filteredBlogs.map((blog) => (
                                 <div onClick={() => handleCardClick(blog.title)} key={blog.id} className="bg-gradient-to-bl from-sky/0 to-sky/100 p-[1px] rounded-[10px] max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
                                     <div className="bg-black/90 text-white relative rounded-[10px] overflow-hidden">
-                                        <p className="text-white text-base font-semibold leading-customXmd absolute top-4 right-4">{blog.date}</p>
+                                        <p className="text-white text-base font-semibold leading-custom-lg absolute top-4 right-4">{blog.date}</p>
                                         <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
                                         <div className="px-3 pb-[39px]">
                                             <div className="flex gap-2 mb-2 absolute top-[45%]">
-                                                <span className="border-sky border rounded-full bg-simple-black leading-customXmd hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
-                                                <span className="text-white/70 bg-light-black font-normal leading-customXmd text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px]">{blog.readTime} min read</span>
+                                                <span className="border-sky border rounded-full bg-black leading-custom-lg hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
+                                                <span className="text-white/70 bg-light-black font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px]">{blog.readTime} min read</span>
                                             </div>
                                             <h3 className="text-xl font-semibold pt-6">{blog.title}</h3>
-                                            <p className="text-white/70 mb-3 font-normal leading-customXmd text-base">{blog.description}</p>
+                                            <p className="text-white/70 mb-3 font-normal leading-custom-lg text-base">{blog.description}</p>
                                             <div className="flex justify-between items-center">
                                                 <div className="flex items-center gap-2 mt-6">
                                                     <Image src={blog.authorImage} alt={blog.author} width={50} height={50} className="size-[50px] rounded-full" />
-                                                    <p className="text-white text-base leading-customXmd font-semibold">{blog.author}</p>
+                                                    <p className="text-white text-base leading-custom-lg font-semibold">{blog.author}</p>
                                                 </div>
                                                 <Image src="/assets/images/svg/sky-arrow.svg" alt="right-arrow" width={20} height={18} className="mt-5 hover:translate-x-1 transition-all duration-500 ease-linear" />
                                             </div>

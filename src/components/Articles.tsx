@@ -7,14 +7,14 @@ import "swiper/css/pagination";
 import { BLOGS_CARD } from "../utils/helper";
 import Image from "next/image";
 
-const LatestArticle = () => {
+const Articles = () => {
     const featuredBlogs = BLOGS_CARD.filter((blog) => blog.isFeatured);
 
     return (
-        <div className="relative container max-xl:px-4 max-w-[1180px] mx-auto lg:py-[180px] md:py-24 py-16">
-            <h2 className="md:mt-[15px] lg:text-5xl md:text-4xl text-3xl font-normal text-white text-center leading-customMd md:pb-[70px] pb-10">
+        <div className="relative container max-xl:px-4 max-w-[1140px] mx-auto lg:py-[180px] md:py-24 py-16">
+            <h1 className="md:mt-[15px] lg:text-5xl md:text-4xl text-3xl font-normal text-white text-center md:pb-[70px] pb-10">
                 Latest <span className="text-sky font-bold">Articles</span>
-            </h2>
+            </h1>
 
             {featuredBlogs.length > 0 ? (
                 <Swiper
@@ -35,21 +35,23 @@ const LatestArticle = () => {
                         <SwiperSlide key={blog.id} className="!max-w-[366px] !w-full">
                             <div className="bg-gradient-to-b from-sky/0 to-sky/100 p-[1px] rounded-[10px] max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
                                 <div className="bg-black/90 text-white relative rounded-[10px]">
-                                    <p className="text-white text-base font-semibold leading-customXmd absolute top-4 right-4">{blog.date}</p>
+                                    <p className="text-white text-base font-semibold leading-custom-lg absolute top-4 right-4">{blog.date}</p>
                                     <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
-                                    <div className="px-3 pb-[39px]">
-                                        <div className="flex gap-[10px] mb-6 -mt-7">
-                                            <span className="border-sky border rounded-full bg-black hover:bg-sky hover:text-black transition-all duration-700 leading-customXmd text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
-                                            <span className="text-white/70 bg-light-black font-normal hover:bg-sky hover:text-black transition-all duration-700 leading-customXmd text-sm border-white hover:border-sky border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px] whitespace-nowrap">{blog.readTime} min read</span>
+                                    <div className="px-3 pb-[39px] flex flex-col">
+                                        <div className="flex gap-2 absolute top-[45%] mb-2">
+                                            <span className="border-sky border rounded-full bg-black leading-custom-lg hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center bg-simple-black">{blog.category}</span>
+                                            <span className="text-white/70 bg-light-black font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px] whitespace-nowrap">{blog.readTime} min read</span>
                                         </div>
-                                        <h3 className="text-xl font-semibold mb-[10px]">{blog.title}</h3>
-                                        <p className="text-white/70 mb-6 font-normal leading-customXmd text-base">{blog.description}</p>
+                                        <h3 className="text-xl font-semibold">{blog.title}</h3>
+                                        <div className="overflow-auto flex-grow scrollbar-hide">
+                                            <p className="text-white/70 mb-3 font-normal leading-custom-lg text-base">{blog.description}</p>
+                                        </div>
                                         <div className="flex justify-between items-center">
-                                            <div className="flex items-center gap-2">
+                                            <div className="flex items-center gap-2 mt-6">
                                                 <Image src={blog.authorImage} alt={blog.author} width={50} height={50} className="size-[50px] rounded-full" />
-                                                <p className="text-white text-base leading-customXmd font-semibold">{blog.author}</p>
+                                                <p className="text-white text-base leading-custom-lg font-semibold">{blog.author}</p>
                                             </div>
-                                            <Image src="/assets/images/svg/sky-arrow.svg" alt="sky-arrow" width={20} height={18} className="mt-5 hover:translate-x-1 transition-all duration-500 ease-linear" />
+                                            <Image src="/assets/images/svg/sky-arrow.svg" alt="right-arrow" width={20} height={18} className="mt-5 hover:translate-x-1 transition-all duration-500 ease-linear" />
                                         </div>
                                     </div>
                                 </div>
@@ -58,13 +60,13 @@ const LatestArticle = () => {
                     ))}
                 </Swiper>
             ) : (
-                <p className="text-center text-white/70 text-xl mt-6">No data found</p>
+                <p className="text-center text-white/70 text-xl mt-6">No blogs found</p>
             )}
 
             {featuredBlogs.length > 0 && (
                 <div className="hidden md:flex justify-between absolute top-1/2 left-[-50px] right-[-50px] transform -translate-y-1/2">
                     <button className="swiper-button-prev size-[60px] bg-sky text-sky py-[17px] px-[15px] rounded-full transition-all duration-300 ease-in-out border border-sky group">
-                        <Image src="/assets/images/svg/slider-left-arrow.svg" alt="slider-left-arrow" width={30} height={27} className="w-[30px] filter group-hover:invert invert-0 brightness-0" />
+                        <Image src="/assets/images/svg/slider-left-arrow.svg" alt="slider-arrow" width={30} height={27} className="w-[30px] filter group-hover:invert invert-0 brightness-0" />
                     </button>
                     <button className="swiper-button-next size-[60px] bg-sky text-sky p-3 rounded-full transition-all duration-300 ease-in-out border border-sky group">
                         <Image src="/assets/images/svg/slider-right-arrow.svg" alt="slider-right-arrow" height={27} width={30} className="w-[30px] filter group-hover:invert invert-0 brightness-0" />
@@ -75,4 +77,4 @@ const LatestArticle = () => {
     );
 };
 
-export default LatestArticle;
+export default Articles;
