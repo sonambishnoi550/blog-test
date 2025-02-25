@@ -1,79 +1,56 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { BLOGS_CARD } from "../utils/helper";
-import Image from "next/image";
-
-const LatestArticle = () => {
-  const featuredBlogs = BLOGS_CARD.filter((blog) => blog.isFeatured);
-
+import React from 'react'
+import Image from 'next/image'
+const Insights = () => {
   return (
-    <div className="relative container max-xl:px-4 max-w-[1180px] mx-auto lg:py-[180px] md:py-24 py-16">
-      <h1 className="md:mt-[15px] lg:text-5xl md:text-4xl text-3xl font-normal text-white text-center leading-customMd md:pb-[70px] pb-10">
-        Latest <span className="text-sky font-bold">Article</span>
-      </h1>
-
-      {featuredBlogs.length > 0 ? (
-        <Swiper
-          id="slider"
-          spaceBetween={20}
-          slidesPerView={1.2}
-          loop={true}
-          centeredSlides={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
-          breakpoints={{
-            300: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView:  3},     
-          }}
-          modules={[Navigation, Autoplay]}
-        >
-          {featuredBlogs.map((blog) => (
-            <SwiperSlide key={blog.id} className="!max-w-[366px] !w-full">
-              <div className="bg-gradient-to-b from-sky/0 to-sky/100 p-[1px] rounded-[10px] max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
-                <div className="bg-black/90 text-white relative rounded-[10px]">
-                  <p className="text-white text-base font-semibold leading-customXmd absolute top-4 right-4">{blog.date}</p>
-                  <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
-                  <div className="px-3 pb-[39px]">
-                    <div className="flex gap-2 mb-2">
-                      <span className="border-sky border rounded-full leading-customXmd hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
-                      <span className="text-white/70 bg-light-black font-normal leading-customXmd text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px] whitespace-nowrap">{blog.readTime} min read</span>
-                    </div>
-                    <h3 className="text-xl font-semibold">{blog.title}</h3>
-                    <p className="text-white/70 mb-3 font-normal leading-customXmd text-base">{blog.description}</p>
-                    <div className="flex justify-between items-center">
-                      <div className="flex items-center gap-2 mt-6">
-                        <Image src={blog.authorImage} alt={blog.author} width={50} height={50} className="size-[50px] rounded-full" />
-                        <p className="text-white text-base leading-customXmd font-semibold">{blog.author}</p>
-                      </div>
-                      <Image src="/assets/images/svg/sky-arrow.svg" alt="sky-arrow" width={20} height={18} className="mt-5 hover:translate-x-1 transition-all duration-500 ease-linear" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      ) : (
-        <p className="text-center text-white/70 text-xl mt-6">No data found</p>
-      )}
-
-      {featuredBlogs.length > 0 && (
-        <div className="hidden md:flex justify-between absolute top-1/2 left-[-50px] right-[-50px] transform -translate-y-1/2">
-          <button className="swiper-button-prev size-[60px] bg-sky text-sky py-[17px] px-[15px] rounded-full transition-all duration-300 ease-in-out border border-sky group">
-            <Image src="/assets/images/svg/slider-left-arrow.svg" alt="slider-arrow" width={30} height={27} className="w-[30px] filter group-hover:invert invert-0 brightness-0" />
-          </button>
-          <button className="swiper-button-next size-[60px] bg-sky text-sky p-3 rounded-full transition-all duration-300 ease-in-out border border-sky group">
-            <Image src="/assets/images/svg/slider-right-arrow.svg" alt="slider-right-arrow" height={27} width={30} className="w-[30px] filter group-hover:invert invert-0 brightness-0" />
-          </button>
+    <div className='bg-black pt-[90px] pb-10'>
+      <div className="container">
+        <div className="md:flex lg:justify-between gap-6 relative">
+          <div className='flex-1'>
+            <h2 className='text-white md:text-5xl text-4xl md:leading-custom-5xl font-normal max-w-[450px]'>What are AI-Driven
+              <span className='text-sky font-semibold'> Market Insights?</span></h2>
+            <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[631px] pt-4 pb-[30px]'>AI-driven market insights harness the power of artificial intelligence to analyze vast amounts of market data in real time, providing actionable information that can help traders and investors make informed decisions.</p>
+            <h5 className='text-xl font-semibold leading-custom-md text-white'>Real-Time Analytics</h5>
+            <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[631px] pt-4 pb-5'>AI can process and analyze data from various sources, such as financial statements, price movements, market sentiment, and even social media trends, providing instant feedback and analysis.</p>
+            <h5 className='text-xl font-semibold leading-custom-md text-white'>News Updates</h5>
+            <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[631px] pt-4 pb-5'>AI tools can sift through the noise of constant news flows and pinpoint stories that are most relevant to your investments. Whether it’s economic reports, geopolitical events, or corporate announcements, AI can identify which developments are likely to move markets.</p>
+            <h5 className='text-xl font-semibold leading-custom-md text-white'>Expert Market Research</h5>
+            <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[631px] pt-4 pb-[50px]'>Advanced algorithms can synthesize historical data with current market trends to forecast potential outcomes, offering the insights of seasoned market experts at your fingertips.</p>
+            <Image src="/assets/images/webp/_market-insight.webp"
+              alt="rmarket-insight"
+              className="max-w-[635px] w-full object-cover pointer-events-none pb-[190px]" width={635} height={550} />
+            <h2 className='text-white md:text-5xl text-4xl md:leading-custom-5xl font-normal max-w-[450px] pb-[30px]'>How AI-Driven Market insights are
+              <span className='text-sky font-semibold'> changing the Game</span></h2>
+            <h5 className='text-xl font-semibold leading-custom-md text-white'>1. Faster Decision-Making</h5>
+            <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[631px] pt-4 pb-5'>In the world of trading and investing, speed is critical. AI systems can analyze millions of data points in seconds, giving you an edge in making quick decisions. For example, when news breaks about a company’s earnings report, AI systems can immediately assess the market’s reaction and provide insights on whether it's a buying or selling opportunity.</p>
+            <h5 className='text-xl font-semibold leading-custom-md text-white'>2. Enhanced Accuracy and Predictive Power</h5>
+            <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[631px] pt-4 pb-5'>Human traders and investors are often prone to cognitive biases, such as overconfidence or emotional decision-making. AI removes these limitations by relying solely on data and algorithms. With machine learning, AI can improve over time, identifying patterns and trends that humans may overlook. This leads to more accurate predictions about market movements, asset prices, and investment risks.</p>
+            <h5 className='text-xl font-semibold leading-custom-md text-white'>3. Customized Insights for Individual Strategies</h5>
+            <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[631px] pt-4 pb-[50px]'>AI-driven analytics can tailor insights to your specific trading or investment strategy. Whether you’re a day trader looking for short-term opportunities or a long-term investor analyzing market fundamentals, AI can filter out irrelevant information and deliver insights that align with your goals. This level of personalization was previously unavailable in traditional market research.</p>
+            <Image src="/assets/images/webp/ai-driven.webp"
+              alt="rmarket-insight"
+              className="max-w-[635px] w-full object-cover pointer-events-none pb-[190px]" width={635} height={550} />
+          </div>
+          <div className='border border-sky rounded-3xl py-[30px] max-w-[364px] h-[525px] sticky top-10 self-start'>
+            <div className='flex items-center gap-[10px] pl-5 pb-6'>
+              <Image src="/assets/images/webp/darrell.webp"
+                alt="darrell"
+                className="size-[50px] object-cover pointer-events-none" width={50} height={50} />
+              <p className='text-white font-semibold text-base leading-6'>Darrell Steward</p>
+            </div>
+            <h5 className='text-white text-base font-semibold leading-5 px-5'>What are AI-Driven Market Insights?</h5>
+            <p className='font-normal lg:text-base text-sm leading-6 px-5 lg:py-4 py-2 text-white/70'>Real-Time Analytics</p>
+            <p className='font-normal lg:text-base text-sm leading-6 px-5 lg:pb-4 pb-2 text-white/70'>News Updates</p>
+            <p className='font-normal lg:text-base text-sm leading-6 px-5 lg:pb-4 pb-2 text-white/70'>Expert Market Research</p>
+            <div className='border border-white/40'></div>
+            <h5 className='text-white text-base font-semibold leading-5 px-5 pt-5 max-w-[324px]'>How AI-Driven Market insights are changing the Game</h5>
+            <p className='font-normal lg:text-base text-sm lg:leading-6 px-5 py-4 text-white/70'>Faster Decision-Making</p>
+            <p className='font-normal lg:text-base text-sm lg:leading-6 px-5 pb-4 text-white/70'>Enhanced Accuracy and Predictive Power</p>
+            <p className='font-normal lg:text-base text-sm lg:leading-6 px-5 text-white/70 max-w-[324px]'>Customized Insights for Individual Strategies</p>
+          </div>
         </div>
-      )}
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default LatestArticle;
+export default Insights

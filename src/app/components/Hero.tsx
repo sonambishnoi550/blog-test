@@ -78,6 +78,8 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
 
     return (
         <div id="home" className="bg-center bg-cover bg-no-repeat pb-16 overflow-hidden bg-black relative">
+            <Image className="absolute top-[5%] left-0 max-w-[237px]" src="/assets/images/webp/hero-top-image.webp" alt="top-image" width={237} height={237}/>
+            <Image className="absolute right-0 bottom-[10%] max-w-[237px]" src="/assets/images/webp/hero-bottom-image.webp" alt="top-image" width={237} height={237} />
             <Header />
             <div className="container max-w-[1220px] mx-auto px-4 relative z-20">
                 <div className="flex flex-col xl:pt-[170px] pt-[140px]">

@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Hero from "./components/Hero";
 import Insights from "./components/Insights"
 import Footer from "./components/Footer";
+import Articles from "./components/Related";
 
 const Page = () => {
   const router = useRouter();
@@ -23,6 +24,7 @@ const Page = () => {
   return (
     <div>
       <Hero pageIndex={pageIndex} onPageChange={handlePageChange} />
+      <Articles/>
       <Insights />
       <Footer/>
     </div>

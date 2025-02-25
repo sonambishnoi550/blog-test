@@ -156,4 +156,14 @@ export const ARTICLES_DATA = [
             authorImage: "/assets/images/webp/henry.webp",
             authorName: "Courtney Henry",
         }
-    ];
+];
+export const menuItems = ["Home", "About Us", "How It Works", "Testimonials", "FAQs", "Contact Us"];
+
+export const socialLinks = [
+    { href: "https://www.facebook.com/", src: "/assets/images/svg/facebook.svg", alt: "facebook" },
+    { href: "https://www.instagram.com/", src: "/assets/images/svg/instagram.svg", alt: "instagram" },
+    { href: "https://www.youtube.com/", src: "/assets/images/svg/youtube.svg", alt: "youtube" },
+    { href: "", src: "/assets/images/svg/music.svg", alt: "music" },
+    { href: "https://x.com/?lang=en", src: "/assets/images/svg/twitter.svg", alt: "twitter" },
+    { href: "https://in.linkedin.com/", src: "/assets/images/svg/linkedin.svg", alt: "linkedin" },
+];
