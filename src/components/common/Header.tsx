@@ -71,9 +71,9 @@ const NavBar = () => {
                 <div className="px-4 container max-w-[1220px] mx-auto">
                     <div className={`pl-20 pr-10 ${open ? "" : "backdrop-blur-lg"} rounded-full border border-white/20 xl:max-w-[1220px] mx-auto max-xl:px-[16px] flex items-center justify-between md:py-[19.5px] py-2`}>
                         <Link href="/">
-                            <Image width={150} height={44} src="/assets/images/png/logo.png" alt="logo" className="max-xl:w-[150px] max-xl:h-[44px] max-lg:w-[120px] max-sm:w-[100px] pointer-events-none" />
+                            <Image width={150} height={44} src="/assets/images/webp/logo.webp" alt="logo" className="max-xl:w-[150px] max-xl:h-[44px] max-lg:w-[120px] max-sm:w-[100px] pointer-events-none" />
                         </Link>
-                        <ul className="flex items-center gap-[38px] max-lg:hidden">
+                        <ul className="flex items-center gap-6 max-lg:hidden">
                             {HEADER_LIST.map((item: HeaderItem, i: number) => (
                                 <li key={i}>
                                     <Link

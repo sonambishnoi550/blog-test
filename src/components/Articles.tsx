@@ -11,7 +11,7 @@ const Articles = () => {
     const featuredBlogs = BLOGS_CARD.filter((blog) => blog.isFeatured);
 
     return (
-        <div className="relative container max-xl:px-4 max-w-[1140px] mx-auto lg:py-[180px] md:py-24 py-16">
+        <div className="relative container max-xl:px-4 max-w-[1170px] mx-auto lg:py-[180px] md:py-24 py-16">
             <h1 className="md:mt-[15px] lg:text-5xl md:text-4xl text-3xl font-normal text-white text-center md:pb-[70px] pb-10">
                 Latest <span className="text-sky font-bold">Articles</span>
             </h1>
@@ -38,16 +38,16 @@ const Articles = () => {
                                     <p className="text-white text-base font-semibold leading-custom-lg absolute top-4 right-4">{blog.date}</p>
                                     <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
                                     <div className="px-3 pb-[39px] flex flex-col">
-                                        <div className="flex gap-2 absolute top-[45%] mb-2">
+                                        <div className="flex gap-2 absolute top-[45%]">
                                             <span className="border-sky border rounded-full bg-black leading-custom-lg hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center bg-simple-black">{blog.category}</span>
                                             <span className="text-white/70 bg-light-black font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px] whitespace-nowrap">{blog.readTime} min read</span>
                                         </div>
-                                        <h3 className="text-xl font-semibold">{blog.title}</h3>
+                                        <h3 className="text-xl font-semibold mt-12 mb-[10px]">{blog.title}</h3>
                                         <div className="overflow-auto flex-grow scrollbar-hide">
-                                            <p className="text-white/70 mb-3 font-normal leading-custom-lg text-base">{blog.description}</p>
+                                            <p className="text-white/70  font-normal leading-custom-lg text-base">{blog.description}</p>
                                         </div>
                                         <div className="flex justify-between items-center">
-                                            <div className="flex items-center gap-2 mt-6">
+                                            <div className="flex items-center gap-[10px] mt-6">
                                                 <Image src={blog.authorImage} alt={blog.author} width={50} height={50} className="size-[50px] rounded-full" />
                                                 <p className="text-white text-base leading-custom-lg font-semibold">{blog.author}</p>
                                             </div>
