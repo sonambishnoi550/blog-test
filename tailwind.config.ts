@@ -16,12 +16,16 @@ export default {
           md: "768px",
           lg: "1024px",
           xl: "1140px",
+
         },
       },
       colors: {
         "sky": "#71CED0",
         "light-black": "#454345",
-        "dark-gray":"#232224"
+        "dark-gray": "#232224",
+        "gray": "#4C4C4C",
+        "red": "#D01314",
+        "green":"#00C11F"
       },
       fontSize: {
         "custom-6xl": "64.09px",
@@ -29,6 +33,7 @@ export default {
       lineHeight: {
         "custom-sm": "21px",
         "custom-md": "24.2px",
+        "custom-lg":"150%",
         "custom-5xl": "58.09px",
         "custom-6xl": "77.56px"
       },
