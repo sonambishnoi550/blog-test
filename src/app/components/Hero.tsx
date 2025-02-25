@@ -29,8 +29,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
     }, []);
 
     const handlePageChange = (newIndex: number) => {
-        router.push(`/blog?page=${newIndex}`, { scroll: false });
-
+        router.push(`/blog?page=${newIndex}`, { scroll: false }); 
         const newBlogs = [
             {
                 id: blogs.length + 1,
@@ -66,7 +65,6 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                 image: "/assets/images/webp/mastering.webp",
             },
         ];
-
         const updatedBlogs = [...blogs, ...newBlogs];
         setBlogs(updatedBlogs);
 
@@ -107,14 +105,14 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                     {filteredBlogs.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1140px] mx-auto justify-center">
                             {filteredBlogs.map((blog) => (
-                                <div key={blog.id} className="bg-gradient-to-b from-sky/0 to-sky/100 p-[1px] rounded-[10px] max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
+                                <div key={blog.id} className="bg-gradient-to-b from-sky/0 to-sky/100 p-[1px] rounded-[10px] xl:!max-w-[364px] !max-w-[320px] w-full sm:w-[80%] md:w-auto mx-auto">
                                     <div className="bg-black/90 text-white relative rounded-[10px]">
                                         <p className="text-white text-base font-semibold leading-custom-lg absolute top-4 right-4">{blog.date}</p>
                                         <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
                                         <div className="px-3 pb-[39px]">
                                             <div className="flex gap-2 mb-2">
-                                                <span className="border-sky border rounded-full whitespace-nowrap leading-custom-lg hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
-                                                <span className="text-white/70 bg-light-black whitespace-nowrap font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px]">{blog.readTime} min read</span>
+                                                <span className="border-sky border rounded-full whitespace-nowrap leading-custom-lg hover:border-white text-xs xl:px-[42px] px-6 h-[37px] py-[3px] flex items-center">{blog.category}</span>
+                                                <span className="text-white/70 bg-light-black whitespace-nowrap font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full xl:px-[42px] px-6 py-[9.5px]">{blog.readTime} min read</span>
                                             </div>
                                             <h3 className="text-xl font-semibold">{blog.title}</h3>
                                             <p className="text-white/70 mb-3 font-normal leading-custom-lg text-base">{blog.description}</p>
@@ -128,7 +126,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                             ))}
                         </div>
                     ) : (
-                        <p className="text-center text-white/70 text-xl mt-6">No blogs found</p>
+                        <p className="text-center text-white/70 text-xl mt-6">No Data found</p>
                     )}
                     <button
                         onClick={() => handlePageChange(pageIndex + 1)}

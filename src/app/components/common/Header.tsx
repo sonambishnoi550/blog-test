@@ -71,7 +71,7 @@ const NavBar = () => {
                                 className=" max-xl:w-[150px] max-xl:h-[44px] max-lg:w-[120px]  max-sm:w-[100px] pointer-events-none"
                             />
                         </Link>
-                        <ul className="flex items-center  gap-[38px] max-lg:hidden">
+                        <ul className="flex items-center gap-6 max-lg:hidden">
                             {HEADER_LIST.map((item: HeaderItem, i: number) => (
                                 <li key={i}>
                                     <Link onClick={() => clickHandler(i)}
@@ -84,8 +84,8 @@ const NavBar = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className='flex max-md:flex-col gap-6 max-lg:hidden'>
-                            <CustomButton myClass={'py-[13px] md:px-[15px]'} text={'Sign Up'} />
+                        <div className='flex gap-6 max-lg:!hidden'>
+                            <CustomButton myClass={'py-[13px] md:px-4'} text={'Sign Up'} />
                             <CustomButton myClass={'py-[13px] md:px-6 px-10'} text={'Login'} />
                         </div>  
                         <div
@@ -97,7 +97,7 @@ const NavBar = () => {
                                     className={`bg-white/70 rounded-full w-[39px] h-1 block transition-all duration-300 ${open ? "translate-x-10" : ""}`}
                                 ></span>
                                 <span
-                                    className={`bg-white/70 rounded-full after:rounded-lg  w-[39px] h-1 block relative after:bg-transparent after:absolute after:top-0 after:left-0 after:w-full after:h-1 after:transition-all after:duration-300 transition-all duration-300 ${open ? "rotate-45 after:rotate-90 after:!bg-white/70" : ""
+                                    className={`bg-white/70 rounded-full after:rounded-lg w-[39px] h-1 block relative after:bg-transparent after:absolute after:top-0 after:left-0 after:w-full after:h-1 after:transition-all after:duration-300 transition-all duration-300 ${open ? "rotate-45 after:rotate-90 after:!bg-white/70" : ""
                                         }`}
                                 ></span>
                                 <span
@@ -117,20 +117,13 @@ const NavBar = () => {
                             key={i}
                             onClick={() => setOpen(false)}
                             href={item.link}
-                            className="font-bold font-source text-base text-white/70"
+                            className="font-bold text-base text-white/70"
                         >
                             {item.title}
                         </a>
                     ))}
-                    <button onClick={() => setOpen(false)} className="text-base font-semibold text-sky py-[10px] px-4 h-[53px] border border-sky rounded-full hover:text-black hover:bg-sky transition-all duration-500 ease-linear">
-                        Sign Up
-                    </button>
-                    <button onClick={() => setOpen(false)} className="text-base font-semibold hover:text-sky text-black bg-sky hover:bg-transparent py-[10px] h-[53px] px-6 border border-sky rounded-full transition-all duration-500 ease-linear">
-                        Login
-                    </button>
-      
-                    <CustomButton custonOnClick={() => setOpen(false)} myClass={'py-[13px] md:px-[15px]'} text={'Sign Up'} />
-                    <CustomButton custonOnClick={() => setOpen(false)} myClass={'py-[13px] md:px-6 px-10'} text={'Login'} />  
+                    <CustomButton custonOnClick={() => setOpen(false)} myClass={'py-[13px] px-4'} text={'Sign Up'} />
+                    <CustomButton custonOnClick={() => setOpen(false)} myClass={'py-[13px] px-6 '} text={'Login'} />  
                 </div>
 
             </div>
