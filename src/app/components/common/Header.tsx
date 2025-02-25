@@ -4,7 +4,7 @@ import { HEADER_LIST, MARQUEE_DATA } from "../../utils/helper";
 import Link from "next/link"
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-
+import CustomButton from "./CustomButton";
 interface HeaderItem {
     title: string;
     link: string;
@@ -84,14 +84,10 @@ const NavBar = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="flex gap-6 max-lg:hidden">
-                            <button className="text-base font-semibold text-sky py-[10px] px-4 h-[53px] border border-sky rounded-full hover:text-black hover:bg-sky transition-all duration-500 ease-linear">
-                                Sign Up
-                            </button>
-                            <button className="text-base font-semibold hover:text-sky text-black bg-sky hover:bg-transparent py-[10px] h-[53px] px-6 border border-sky rounded-full transition-all duration-500 ease-linear">
-                                Login
-                            </button>
-                        </div>
+                        <div className='flex max-md:flex-col gap-6 max-lg:hidden'>
+                            <CustomButton myClass={'py-[13px] md:px-[15px]'} text={'Sign Up'} />
+                            <CustomButton myClass={'py-[13px] md:px-6 px-10'} text={'Login'} />
+                        </div>  
                         <div
                             className="lg:hidden z-50 cursor-pointer"
                             onClick={() => setOpen(!open)}
@@ -132,6 +128,9 @@ const NavBar = () => {
                     <button onClick={() => setOpen(false)} className="text-base font-semibold hover:text-sky text-black bg-sky hover:bg-transparent py-[10px] h-[53px] px-6 border border-sky rounded-full transition-all duration-500 ease-linear">
                         Login
                     </button>
+      
+                    <CustomButton custonOnClick={() => setOpen(false)} myClass={'py-[13px] md:px-[15px]'} text={'Sign Up'} />
+                    <CustomButton custonOnClick={() => setOpen(false)} myClass={'py-[13px] md:px-6 px-10'} text={'Login'} />  
                 </div>
 
             </div>

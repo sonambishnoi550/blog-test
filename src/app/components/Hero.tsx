@@ -79,7 +79,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
     );
 
     return (
-        <div id="home" className="bg-center bg-cover bg-no-repeat pb-16 overflow-hidden bg-black bg-hero-bg-image max-sm:bg-black/20 relative">
+        <div id="home" className="bg-center bg-cover bg-no-repeat pb-16 overflow-hidden bg-black relative">
             <Header />
             <div className="container max-w-[1220px] mx-auto px-4 relative z-20">
                 <div className="flex flex-col xl:pt-[170px] pt-[140px]">
@@ -113,8 +113,8 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                                         <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
                                         <div className="px-3 pb-[39px]">
                                             <div className="flex gap-2 mb-2">
-                                                <span className="border-sky border rounded-full leading-custom-lg hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
-                                                <span className="text-white/70 bg-light-black font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px]">{blog.readTime} min read</span>
+                                                <span className="border-sky border rounded-full whitespace-nowrap leading-custom-lg hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
+                                                <span className="text-white/70 bg-light-black whitespace-nowrap font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px]">{blog.readTime} min read</span>
                                             </div>
                                             <h3 className="text-xl font-semibold">{blog.title}</h3>
                                             <p className="text-white/70 mb-3 font-normal leading-custom-lg text-base">{blog.description}</p>
