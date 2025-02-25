@@ -30,7 +30,7 @@ const Insights = () => {
               alt="ai-driven"
               className="max-w-[635px] w-full object-cover pointer-events-none" width={635} height={550} />
           </div>
-          <div className='border border-sky rounded-3xl py-[30px] max-w-[364px] h-[525px] sticky top-10 self-start bg-cover bg-no-repeat bg-center' style={{ backgroundImage: `url(/assets/images/webp/footer-bg.webp)` }}>
+          <div className='border border-sky rounded-3xl py-[30px] max-w-[364px] h-[525px] sticky top-10 self-start bg-cover bg-no-repeat bg-center' style={{ backgroundImage: `url(/assets/images/webp/market-bg-image.webp)` }}>
             <div className='flex items-center gap-[10px] pl-5 pb-6'>
               <Image src="/assets/images/webp/darrell.webp"
                 alt="darrell"

@@ -113,14 +113,14 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                                         <p className="text-white text-base font-semibold leading-custom-lg absolute top-4 right-4">{blog.date}</p>
                                         <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
                                         <div className="px-3 pb-[39px]">
-                                            <div className="flex gap-2 mb-2 -mt-7">
+                                            <div className="flex gap-[10px] mb-6 -mt-7">
                                                 <span className="border-sky font-normal bg-black border rounded-full whitespace-nowrap leading-custom-lg hover:bg-sky hover:text-black transition-all duration-700 text-xs xl:px-[42px] px-6 h-[37px] py-[3px] flex items-center">{blog.category}</span>
                                                 <span className="text-white/70 bg-dark-gray hover:bg-sky hover:text-black transition-all duration-700 whitespace-nowrap font-normal hover:border-sky leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full xl:px-[42px] px-6 py-[9.5px]">{blog.readTime} min read</span>
                                             </div>
-                                            <h3 className="text-xl font-semibold">{blog.title}</h3>
-                                            <p className="text-white/70 mb-3 font-normal leading-custom-lg text-base">{blog.description}</p>
+                                            <h3 className="text-xl font-semibold mb-[10px]">{blog.title}</h3>
+                                            <p className="text-white/70 mb-6 font-normal leading-custom-lg text-base">{blog.description}</p>
                                             <div className="flex justify-between items-center">
-                                            <div className="flex items-center gap-2 mt-6">
+                                            <div className="flex items-center gap-2">
                                                 <Image src={blog.authorImage} alt={blog.author} width={50} height={50} className="size-[50px] rounded-full" />
                                                 <p className="text-white text-base leading-custom-lg font-semibold">{blog.author}</p>
                                             </div>

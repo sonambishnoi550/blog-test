@@ -38,14 +38,14 @@ const LatestArticle = () => {
                                     <p className="text-white text-base font-semibold leading-customXmd absolute top-4 right-4">{blog.date}</p>
                                     <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
                                     <div className="px-3 pb-[39px]">
-                                        <div className="flex gap-2 mb-2 -mt-7">
+                                        <div className="flex gap-[10px] mb-6 -mt-7">
                                             <span className="border-sky border rounded-full bg-black hover:bg-sky hover:text-black transition-all duration-700 leading-customXmd text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
                                             <span className="text-white/70 bg-light-black font-normal hover:bg-sky hover:text-black transition-all duration-700 leading-customXmd text-sm border-white hover:border-sky border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px] whitespace-nowrap">{blog.readTime} min read</span>
                                         </div>
-                                        <h3 className="text-xl font-semibold">{blog.title}</h3>
-                                        <p className="text-white/70 mb-3 font-normal leading-customXmd text-base">{blog.description}</p>
+                                        <h3 className="text-xl font-semibold mb-[10px]">{blog.title}</h3>
+                                        <p className="text-white/70 mb-6 font-normal leading-customXmd text-base">{blog.description}</p>
                                         <div className="flex justify-between items-center">
-                                            <div className="flex items-center gap-2 mt-6">
+                                            <div className="flex items-center gap-2">
                                                 <Image src={blog.authorImage} alt={blog.author} width={50} height={50} className="size-[50px] rounded-full" />
                                                 <p className="text-white text-base leading-customXmd font-semibold">{blog.author}</p>
                                             </div>
