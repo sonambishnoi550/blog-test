@@ -6,8 +6,8 @@ export const MARQUEE_DATA = [
     },
     {
         id: "2",
-        countryCode: "US30",
-        countryPin: "41048.38 / 41044.58",
+        countryCode: "NAS100",
+        countryPin: "18948.45 / 18945.15",
     },
     {
         id: "3",
@@ -16,8 +16,8 @@ export const MARQUEE_DATA = [
     },
     {
         id: "4",
-        countryCode: "US30",
-        countryPin: "41048.38 / 41044.58",
+        countryCode: "USDJPY",
+        countryPin: "143.651 / 143.637",
     },
     {
         id: "5",
@@ -89,7 +89,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/eleanor.webp",
         date: "20 Dec 2024",
         image: "/assets/images/webp/mastering.webp",
-        isFeatured: false, 
+        isFeatured: true, 
     },
     {
         id: 4,
@@ -125,7 +125,7 @@ export const BLOGS_CARD = [
         authorImage: "/assets/images/webp/kristen.webp",
         date: "20 Dec 2024",
         image: "/assets/images/webp/trading.webp",
-        isFeatured: true, 
+        isFeatured: false, 
     },
 ];
 export const ARTICLES_DATA = [
