@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div className='bg-cover bg-no-repeat bg-black pt-[60px]' style={{ backgroundImage: `url(/assets/images/webp/footer-bg.webp)` }}>
             <div className="container max-w-[1220px] mx-auto">
-                <Image src="/assets/images/webp/logo.webp" alt="real-time" width={150} height={44} className="max-w-[150px] w-full object-cover pointer-events-none mb-[30px]" />
+                <Image src="/assets/images/webp/logo.webp" alt="logo" width={150} height={44} className="max-w-[150px] w-full object-cover pointer-events-none mb-[30px]" />
                 <div className="flex flex-wrap gap-6 pb-[30px]">
                     {menuItems.map((item, index) => (
                         <p key={index} className='text-base text-white font-semibold leading-6'>{item}</p>

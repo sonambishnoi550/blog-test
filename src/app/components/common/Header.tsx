@@ -58,17 +58,17 @@ const NavBar = () => {
                 </Marquee>
 
             </div>
-            <div id="navbar" className=" z-40 fixed mt-4  left-0 w-full shadow-lg">
+            <div id="navbar" className=" z-40 fixed mt-4 left-0 w-full shadow-lg">
                 <div className="px-4 container max-w-[1220px] mx-auto">
                     <div className={` pl-20 pr-10 bg-white/10 ${open ? "" : "backdrop-blur-lg"
-                        } rounded-full border border-white/20 xl:max-w-[1220px] mx-auto  max-xl:px-[16px] flex items-center justify-between md:py-[19.5px] py-2`}>
+                        } rounded-full border border-white/20 xl:max-w-[1220px] mx-auto max-xl:px-[16px] flex items-center justify-between md:py-[19.5px] py-2`}>
                         <Link href="/">
                             <Image
                                 width={150}
                                 height={44}
                                 src="/assets/images/webp/logo.webp"
                                 alt="logo"
-                                className=" max-xl:w-[150px] max-xl:h-[44px] max-lg:w-[120px]  max-sm:w-[100px] pointer-events-none"
+                                className=" max-xl:w-[150px] max-xl:h-[44px] max-lg:w-[120px] max-sm:w-[100px] pointer-events-none"
                             />
                         </Link>
                         <ul className="flex items-center gap-6 max-lg:hidden">
@@ -76,7 +76,7 @@ const NavBar = () => {
                                 <li key={i}>
                                     <Link onClick={() => clickHandler(i)}
                                         href={item.link}
-                                        className={`font-normal  text-base hover:text-sky transition-all duration-300 ${Active === i ? "text-sky" : "text-white/70"
+                                        className={`font-normal text-base hover:text-sky transition-all duration-300 ${Active === i ? "text-sky" : "text-white/70"
                                             } `}
                                     >
                                         {item.title}
@@ -92,7 +92,7 @@ const NavBar = () => {
                             className="lg:hidden z-50 cursor-pointer"
                             onClick={() => setOpen(!open)}
                         >
-                            <button className="overflow-hidden relative z-50 lg:hidden size-[30px] h-5  flex flex-col justify-between items-center">
+                            <button className="overflow-hidden relative z-50 lg:hidden size-[30px] h-5 flex flex-col justify-between items-center">
                                 <span
                                     className={`bg-white/70 rounded-full w-[39px] h-1 block transition-all duration-300 ${open ? "translate-x-10" : ""}`}
                                 ></span>
@@ -123,9 +123,8 @@ const NavBar = () => {
                         </a>
                     ))}
                     <CustomButton custonOnClick={() => setOpen(false)} myClass={'py-[13px] px-4'} text={'Sign Up'} />
-                    <CustomButton custonOnClick={() => setOpen(false)} myClass={'py-[13px] px-6 '} text={'Login'} />  
+                    <CustomButton custonOnClick={() => setOpen(false)} myClass={'py-[13px] px-6 '} text={'Login'} /> 
                 </div>
-
             </div>
         </>
     );

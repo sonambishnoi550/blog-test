@@ -80,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
     return (
         <div id="home" className="bg-center bg-cover bg-no-repeat overflow-hidden bg-black relative">
             <Image className="absolute top-[5%] left-0 max-w-[237px]" src="/assets/images/webp/hero-top-image.webp" alt="top-image" width={237} height={237}/>
-            <Image className="absolute right-0 bottom-[10%] max-w-[237px]" src="/assets/images/webp/hero-bottom-image.webp" alt="top-image" width={237} height={237} />
+            <Image className="absolute right-0 bottom-[10%] max-w-[237px]" src="/assets/images/webp/hero-bottom-image.webp" alt="bottom-image" width={237} height={237} />
             <Header />
             <div className="container max-w-[1220px] mx-auto px-4 relative z-20">
                 <div className="flex flex-col xl:pt-[170px] pt-[140px]">
@@ -115,7 +115,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                                         <div className="px-3 pb-[39px]">
                                             <div className="flex gap-2 mb-2 -mt-7">
                                                 <span className="border-sky font-normal bg-black border rounded-full whitespace-nowrap leading-custom-lg hover:bg-sky hover:text-black transition-all duration-700 text-xs xl:px-[42px] px-6 h-[37px] py-[3px] flex items-center">{blog.category}</span>
-                                                <span className="text-white/70 bg-dark-gray hover:bg-sky hover:text-black transition-all duration-700 whitespace-nowrap font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full xl:px-[42px] px-6 py-[9.5px]">{blog.readTime} min read</span>
+                                                <span className="text-white/70 bg-dark-gray hover:bg-sky hover:text-black transition-all duration-700 whitespace-nowrap font-normal hover:border-sky leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full xl:px-[42px] px-6 py-[9.5px]">{blog.readTime} min read</span>
                                             </div>
                                             <h3 className="text-xl font-semibold">{blog.title}</h3>
                                             <p className="text-white/70 mb-3 font-normal leading-custom-lg text-base">{blog.description}</p>

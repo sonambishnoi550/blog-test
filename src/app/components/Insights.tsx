@@ -2,11 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 const Insights = () => {
   return (
-    <div className='bg-black pt-[90px] pb-10'>
+    <div className='bg-black py-[90px]'>
       <div className="container">
         <div className="md:flex lg:justify-between gap-6 relative">
           <div className='flex-1'>
-            <h2 className='text-white md:text-5xl text-4xl md:leading-custom-5xl font-normal max-w-[450px]'>What are AI-Driven
+            <h2 className='text-white lg:text-5xl text-4xl lg:leading-custom-5xl font-normal max-w-[450px]'>What are AI-Driven
               <span className='text-sky font-semibold'> Market Insights?</span></h2>
             <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[655px] pt-4 pb-[30px]'>AI-driven market insights harness the power of artificial intelligence to analyze vast amounts of market data in real time, providing actionable information that can help traders and investors make informed decisions.</p>
             <h5 className='text-xl font-semibold leading-custom-md text-white'>Real-Time Analytics</h5>
@@ -15,10 +15,10 @@ const Insights = () => {
             <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[655px] pt-4 pb-5'>AI tools can sift through the noise of constant news flows and pinpoint stories that are most relevant to your investments. Whether it’s economic reports, geopolitical events, or corporate announcements, AI can identify which developments are likely to move markets.</p>
             <h5 className='text-xl font-semibold leading-custom-md text-white'>Expert Market Research</h5>
             <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[655px] pt-4 pb-[50px]'>Advanced algorithms can synthesize historical data with current market trends to forecast potential outcomes, offering the insights of seasoned market experts at your fingertips.</p>
-            <Image src="/assets/images/webp/_market-insight.webp"
-              alt="rmarket-insight"
+            <Image src="/assets/images/webp/market-insight.webp"
+              alt="market-insight"
               className="max-w-[635px] w-full object-cover pointer-events-none pb-[190px]" width={635} height={550} />
-            <h2 className='text-white md:text-5xl text-4xl md:leading-custom-5xl font-normal max-w-[630px] pb-[30px]'>How AI-Driven Market Insights Are
+            <h2 className='text-white lg:text-5xl text-4xl lg:leading-custom-5xl font-normal max-w-[630px] pb-[30px]'>How AI-Driven Market Insights Are
               <span className='text-sky font-semibold'> Changing The Game</span></h2>
             <h5 className='text-xl font-semibold leading-custom-md text-white'>1. Faster Decision-Making</h5>
             <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[655px] pt-4 pb-5'>In the world of trading and investing, speed is critical. AI systems can analyze millions of data points in seconds, giving you an edge in making quick decisions. For example, when news breaks about a company’s earnings report, AI systems can immediately assess the market’s reaction and provide insights on whether it's a buying or selling opportunity.</p>
@@ -27,10 +27,10 @@ const Insights = () => {
             <h5 className='text-xl font-semibold leading-custom-md text-white'>3. Customized Insights for Individual Strategies</h5>
             <p className='lg:text-base text-sm leading-6 font-normal text-white/70 max-w-[655px] pt-4 pb-[50px]'>AI-driven analytics can tailor insights to your specific trading or investment strategy. Whether you’re a day trader looking for short-term opportunities or a long-term investor analyzing market fundamentals, AI can filter out irrelevant information and deliver insights that align with your goals. This level of personalization was previously unavailable in traditional market research.</p>
             <Image src="/assets/images/webp/ai-driven.webp"
-              alt="rmarket-insight"
-              className="max-w-[635px] w-full object-cover pointer-events-none pb-[190px]" width={635} height={550} />
+              alt="ai-driven"
+              className="max-w-[635px] w-full object-cover pointer-events-none" width={635} height={550} />
           </div>
-          <div className='border border-sky rounded-3xl py-[30px] max-w-[364px] h-[525px] sticky top-10 self-start'>
+          <div className='border border-sky rounded-3xl py-[30px] max-w-[364px] h-[525px] sticky top-10 self-start bg-cover bg-no-repeat bg-center' style={{ backgroundImage: `url(/assets/images/webp/footer-bg.webp)` }}>
             <div className='flex items-center gap-[10px] pl-5 pb-6'>
               <Image src="/assets/images/webp/darrell.webp"
                 alt="darrell"

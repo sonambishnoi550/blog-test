@@ -22,12 +22,12 @@ const Page = () => {
   };
 
   return (
-    <div>
+    <>
       <Hero pageIndex={pageIndex} onPageChange={handlePageChange} />
       <Articles/>
       <Footer />
       <Insights/>
-    </div>
+    </>
   );
 };
 

@@ -12,9 +12,9 @@ const LatestArticle = () => {
 
     return (
         <div className="relative container max-xl:px-4 max-w-[1180px] mx-auto lg:py-[180px] md:py-24 py-16">
-            <h1 className="md:mt-[15px] lg:text-5xl md:text-4xl text-3xl font-normal text-white text-center leading-customMd md:pb-[70px] pb-10">
-                Latest <span className="text-sky font-bold">Article</span>
-            </h1>
+            <h2 className="md:mt-[15px] lg:text-5xl md:text-4xl text-3xl font-normal text-white text-center leading-customMd md:pb-[70px] pb-10">
+                Latest <span className="text-sky font-bold">Articles</span>
+            </h2>
 
             {featuredBlogs.length > 0 ? (
                 <Swiper
@@ -38,9 +38,9 @@ const LatestArticle = () => {
                                     <p className="text-white text-base font-semibold leading-customXmd absolute top-4 right-4">{blog.date}</p>
                                     <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
                                     <div className="px-3 pb-[39px]">
-                                        <div className="flex gap-2 mb-2">
-                                            <span className="border-sky border rounded-full leading-customXmd hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
-                                            <span className="text-white/70 bg-light-black font-normal leading-customXmd text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px] whitespace-nowrap">{blog.readTime} min read</span>
+                                        <div className="flex gap-2 mb-2 -mt-7">
+                                            <span className="border-sky border rounded-full bg-black hover:bg-sky hover:text-black transition-all duration-700 leading-customXmd text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
+                                            <span className="text-white/70 bg-light-black font-normal hover:bg-sky hover:text-black transition-all duration-700 leading-customXmd text-sm border-white hover:border-sky border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px] whitespace-nowrap">{blog.readTime} min read</span>
                                         </div>
                                         <h3 className="text-xl font-semibold">{blog.title}</h3>
                                         <p className="text-white/70 mb-3 font-normal leading-customXmd text-base">{blog.description}</p>
@@ -64,7 +64,7 @@ const LatestArticle = () => {
             {featuredBlogs.length > 0 && (
                 <div className="hidden md:flex justify-between absolute top-1/2 left-[-50px] right-[-50px] transform -translate-y-1/2">
                     <button className="swiper-button-prev size-[60px] bg-sky text-sky py-[17px] px-[15px] rounded-full transition-all duration-300 ease-in-out border border-sky group">
-                        <Image src="/assets/images/svg/slider-left-arrow.svg" alt="slider-arrow" width={30} height={27} className="w-[30px] filter group-hover:invert invert-0 brightness-0" />
+                        <Image src="/assets/images/svg/slider-left-arrow.svg" alt="slider-left-arrow" width={30} height={27} className="w-[30px] filter group-hover:invert invert-0 brightness-0" />
                     </button>
                     <button className="swiper-button-next size-[60px] bg-sky text-sky p-3 rounded-full transition-all duration-300 ease-in-out border border-sky group">
                         <Image src="/assets/images/svg/slider-right-arrow.svg" alt="slider-right-arrow" height={27} width={30} className="w-[30px] filter group-hover:invert invert-0 brightness-0" />
