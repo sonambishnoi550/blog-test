@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientLayout from "../components/ClientLayout";
-
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Blog-test",
@@ -25,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-Inter bg-black antialiased">
-        <ClientLayout>  {children}</ClientLayout>
+        <Suspense>
+          <ClientLayout>  {children}</ClientLayout>
+        </Suspense>
       </body>
     </html>
   );
