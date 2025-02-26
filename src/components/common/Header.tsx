@@ -20,23 +20,7 @@ interface MarqueeItem {
 const NavBar = () => {
     const [open, setOpen] = useState<boolean>(false);
     const [Active, setActive] = useState<number | null>(4);
-    const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const pathname = usePathname()
-
-    const handleScroll = () => {
-        if (window.scrollY > 80) {
-            setIsScrolled(true);
-        } else {
-            setIsScrolled(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
 
     function clickHandler(i: number) {
         setActive(i);
@@ -65,10 +49,9 @@ const NavBar = () => {
 
             <div
                 id="navbar"
-                className={`z-40 fixed left-0 w-full shadow-lg transition-all duration-300 ${isScrolled ? "top-0" : "mt-4"
-                    }`}
+                className={`z-40 w-full shadow-lg transition-all duration-300 `}
             >
-                <div className="px-4 container max-w-[1220px] mx-auto">
+                <div className="px-4 container max-w-[1220px] mx-auto mt-6">
                     <div className={`pl-20 pr-10 ${open ? "" : "backdrop-blur-lg"} rounded-full border border-white/20 xl:max-w-[1220px] mx-auto max-xl:px-[16px] flex items-center justify-between md:py-[19.5px] py-2`}>
                         <Link href="/">
                             <Image width={150} height={44} src="/assets/images/webp/logo.webp" alt="logo" className="max-xl:w-[150px] max-xl:h-[44px] max-lg:w-[120px] max-sm:w-[100px] pointer-events-none" />
@@ -110,8 +93,8 @@ const NavBar = () => {
                             {item.title}
                         </a>
                     ))}
-                    <CustomButton custonOnClick={() => setOpen(false)} text="Sign Up" myClass="!py-[10px] !px-4 !h-[53px] text-base !border-sky" />
-                    <CustomButton custonOnClick={() => setOpen(false)} text="Login" myClass="!text-base py-[10px] h-[53px] px-6 !border-sky !bg-sky hover:!bg-transparent !text-black hover:!text-sky" />
+                    <CustomButton custonOnClick={() => setOpen(false)} text="Sign Up" myClass="!py-[10px] !px-4  text-base !border-sky" />
+                    <CustomButton custonOnClick={() => setOpen(false)} text="Login" myClass="!text-base py-[10px] px-6 !border-sky !bg-sky hover:!bg-transparent !text-black hover:!text-sky" />
                 </div>
             </div>
         </>

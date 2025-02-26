@@ -5,6 +5,7 @@ import React from "react";
 import Header from "./common/Header";
 import Image from "next/image";
 import { BLOGS_CARD } from "../utils/helper";
+import CustomButton from "./common/CustomButton";
 
 
 interface HeroProps {
@@ -93,6 +94,8 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
     };
     return (
         <div id="home" className="bg-center bg-cover bg-no-repeat relative overflow-hidden">
+            <Image className="absolute top-[0%] left-0 max-w-[237px]" src="/assets/images/webp/hero-top-image.webp" alt="top-image" width={237} height={237} />
+            <Image className="absolute right-0 bottom-[10%] max-w-[237px]" src="/assets/images/webp/hero-bottom-image.webp" alt="bottom-image" width={237} height={237} />
             <Header />
             <div className="container max-w-[1220px] mx-auto px-4 relative z-20">
                 <div className="flex flex-col xl:pt-[170px] pt-[140px]">
@@ -120,7 +123,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                     {filteredBlogs.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1140px] mx-auto justify-center">
                             {filteredBlogs.map((blog) => (
-                                <div onClick={() => handleCardClick(blog.title)} key={blog.id} className="bg-gradient-to-b from-sky/0 to-sky/100 p-[1px] rounded-[10px] max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
+                                <div onClick={() => handleCardClick(blog.title)} key={blog.id} className="bg-gradient-to-b cursor-pointer from-sky/0 to-sky/100 p-[1px] rounded-[10px] max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
                                     <div className="bg-black/90 text-white relative rounded-[10px] overflow-hidden">
                                         <p className="text-white text-base font-semibold leading-custom-lg absolute top-4 right-4">{blog.date}</p>
                                         <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
@@ -144,14 +147,9 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                             ))}
                         </div>
                     ) : (
-                        <p className="text-center text-white/70 text-xl mt-6">No blogs found</p>
+                        <p className="text-center text-white/70 text-xl mt-6">No blogs data found</p>
                     )}
-                    <button
-                        onClick={() => handlePageChange(pageIndex + 1)}
-                        className="mt-6 bg-sky text-black text-base font-semibold hover:text-sky px-[26.7px] py-[14.6px] flex mx-auto rounded-full hover:bg-transparent border border-sky transition-all duration-500"
-                    >
-                        See All Blogs
-                    </button>
+                    <CustomButton custonOnClick={() => handlePageChange(pageIndex + 1)} text="See All Blogs" myClass="mt-6 bg-sky text-black text-base !text-black font-semibold hover:!text-sky px-[26.7px] py-[14.6px] flex mx-auto rounded-full hover:bg-transparent border border-sky transition-all duration-500"/>
                 </div>
             </div>
         </div>

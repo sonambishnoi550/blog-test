@@ -33,7 +33,7 @@ const Articles = () => {
                 >
                     {featuredBlogs.map((blog) => (
                         <SwiperSlide key={blog.id} className="!max-w-[366px] !w-full">
-                            <div className="bg-gradient-to-b from-sky/0 to-sky/100 p-[1px] rounded-[10px] max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
+                            <div className="bg-gradient-to-b cursor-pointer from-sky/0 to-sky/100 p-[1px] rounded-[10px] max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
                                 <div className="bg-black/90 text-white relative rounded-[10px]">
                                     <p className="text-white text-base font-semibold leading-custom-lg absolute top-4 right-4">{blog.date}</p>
                                     <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
@@ -60,7 +60,7 @@ const Articles = () => {
                     ))}
                 </Swiper>
             ) : (
-                <p className="text-center text-white/70 text-xl mt-6">No blogs found</p>
+                <p className="text-center text-white/70 text-xl mt-6">No blogs data found</p>
             )}
 
             {featuredBlogs.length > 0 && (

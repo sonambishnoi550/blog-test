@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className='flex gap-6 md:mb-20 mb-7'>
                     {SOCIAL_LINKS.map((social, index) => (
                         <a key={index} href={social.href} target="_blank" rel="noopener noreferrer">
-                            <img src={social.src} alt={social.alt} className='hover:scale-105 transition-all duration-100 ease-linear' />
+                            <img src={social.src} alt={social.alt} className='hover:scale-125 transition-all duration-700 ease-linear' />
                         </a>
                     ))}
                 </div>
