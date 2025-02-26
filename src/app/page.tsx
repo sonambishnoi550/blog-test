@@ -9,11 +9,7 @@ const Page = () => {
     <div>
       <Suspense>
         <Hero pageIndex={0} onPageChange={() => { }} />
-      </Suspense>
-      <Suspense>
         <Articles />
-      </Suspense>
-      <Suspense>
         <Footer />
       </Suspense>
     </div>

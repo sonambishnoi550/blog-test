@@ -17,7 +17,7 @@ export default function BlogDetail() {
     if (!blog) return notFound();
 
     return (
-        <div>
+        <>
             <Header />
             <section className="bg-black text-white md:pl-4 max-md:px-4 max-w-[1920] mx-auto">
                 <div className="2xl:max-w-[1400px] mx-auto flex max-md:flex-wrap  items-center relative lg:justify-between justify-center gap-8">
@@ -63,6 +63,6 @@ export default function BlogDetail() {
             <Insights />
             <Articles />
             <Footer />
-        </div>
+        </>
     );
 }

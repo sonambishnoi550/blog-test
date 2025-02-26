@@ -98,7 +98,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
             <Image className="absolute right-0 bottom-[10%] max-w-[237px]" src="/assets/images/webp/hero-bottom-image.webp" alt="bottom-image" width={237} height={237} />
             <Header />
             <div className="container max-w-[1220px] mx-auto px-4 relative z-20">
-                <div className="flex flex-col xl:pt-[170px] pt-[140px]">
+                <div className="flex flex-col xl:pt-[164px] pt-[140px]">
                     <h1 className="md:mt-[15px] lg:text-custom-6xl md:text-6xl text-4xl font-normal text-white lg:max-w-[700px] max-w-[718px] mx-auto text-center max-lg:leading-customMd">
                         Unlock Knowledge with Our <span className="text-sky font-bold">Featured Articles</span>
                     </h1>

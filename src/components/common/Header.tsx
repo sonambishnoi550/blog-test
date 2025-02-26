@@ -17,7 +17,7 @@ interface MarqueeItem {
     id: string;
 }
 
-const NavBar = () => {
+const Header = () => {
     const [open, setOpen] = useState<boolean>(false);
     const [Active, setActive] = useState<number | null>(4);
     const pathname = usePathname()
@@ -51,7 +51,7 @@ const NavBar = () => {
                 id="navbar"
                 className={`z-40 w-full shadow-lg transition-all duration-300 `}
             >
-                <div className="px-4 container max-w-[1220px] mx-auto mt-6">
+                <div className="px-4 container max-w-[1220px] mx-auto my-6">
                     <div className={`pl-20 pr-10 ${open ? "" : "backdrop-blur-lg"} rounded-full border border-white/20 xl:max-w-[1220px] mx-auto max-xl:px-[16px] flex items-center justify-between md:py-[19.5px] py-2`}>
                         <Link href="/">
                             <Image width={150} height={44} src="/assets/images/webp/logo.webp" alt="logo" className="max-xl:w-[150px] max-xl:h-[44px] max-lg:w-[120px] max-sm:w-[100px] pointer-events-none" />
@@ -101,4 +101,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default Header;
