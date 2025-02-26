@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
             <Header />
             <div className="container max-w-[1220px] mx-auto px-4 relative z-20">
                 <div className="flex flex-col xl:pt-[70px] pt-10">
-                    <h1 className="md:mt-[15px] lg:text-customMd md:text-6xl text-customXmd font-normal text-white lg:max-w-[700px] mx-auto text-center">
+                    <h1 className="md:mt-[15px] lg:text-custom-6xl md:text-6xl text-4xl font-normal text-white lg:max-w-[700px] mx-auto text-center">
                         Unlock Knowledge with Our <span className="text-sky font-bold">Featured Articles</span>
                     </h1>
                     <p className="text-white/70 text-base pt-4 max-w-[674px] mx-auto text-center">

@@ -22,14 +22,14 @@ body{
 .swiper-button-next {
   width: 60px !important;
   height: 60px !important;
-  right: -24px !important;
+  right: -6% !important;
 
 }
 
 .swiper-button-prev {
   width: 60px !important;
   height: 60px !important;
-  left: -24px !important;
+  left: -6% !important;
 }
 
 .swiper-pagination-fraction,
@@ -38,6 +38,14 @@ body{
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   top: 80% !important;
 }
+/* Pagination Dots Color */
+.swiper-pagination-bullet {
+  background: white !important;
+  /* Sky color */
+
+  transition:  ease-in-out;
+}
+
 
 @media (max-width: 1350.99px) {
   .swiper-button-next {
