@@ -149,7 +149,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                     ) : (
                         <p className="text-center text-white/70 text-xl mt-6">No blogs data found</p>
                     )}
-                    <CustomButton custonOnClick={() => handlePageChange(pageIndex + 1)} text="See All Blogs" myClass="mt-6 bg-sky text-black text-base !text-black font-semibold hover:!text-sky px-[26.7px] py-[14.6px] flex mx-auto rounded-full hover:bg-transparent border border-sky transition-all duration-500"/>
+                    <CustomButton custonOnClick={() => handlePageChange(pageIndex + 1)} text="See All Blogs" myClass="mt-10 bg-sky text-black text-base !text-black font-semibold hover:!text-sky px-[26.7px] py-[14.6px] flex mx-auto rounded-full hover:bg-transparent border border-sky transition-all duration-500"/>
                 </div>
             </div>
         </div>

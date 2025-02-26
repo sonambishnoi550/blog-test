@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { DISCLAIMERS, NAV_LINKS, SOCIAL_LINKS } from '../utils/helper';
+import { FOOTER_DATA, NAV_LINKS, SOCIAL_LINKS } from '../utils/helper';
 
 const Footer = () => {
     const year = new Date().getFullYear();
@@ -17,7 +17,7 @@ const Footer = () => {
                     ))}
                 </div>
 
-                {DISCLAIMERS.map((item, index) => (
+                {FOOTER_DATA.map((item, index) => (
                     <div key={index} className="pb-[30px]">
                         <h4 className='text-base text-white font-semibold leading-custom-lg pb-[10px]'>{item.title}</h4>
                         <p className='md:text-base text-base text-white/80 font-normal leading-custom-lg max-w-[1140px]'>{item.content} <br></br><span>{item.extraContent}</span></p>

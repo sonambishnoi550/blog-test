@@ -1,4 +1,4 @@
-export const MARQUEE_DATA = [
+export const MARQUEE_LIST = [
     {
         id: "1",
         countryCode: "US30",
@@ -131,7 +131,7 @@ export const BLOGS_CARD = [
 
 export const NAV_LINKS = ["Home", "About Us", "How It Works", "Testimonials", "FAQs", "Contact Us"];
 
-export const DISCLAIMERS = [
+export const FOOTER_DATA = [
     {
         title: "Trade Responsibility Disclaimer",
         content: "Trading Forex and CFDs involves a high level of risk and may not be suitable for all investors. Leverage can work both for and against you, and it’s possible to lose more than your initial investment. Please ensure that you fully understand the risks involved, taking into account your financial objectives and risk appetite. Seek independent financial advice if necessary before starting trading. ArrowTrade does not offer financial advice.",
