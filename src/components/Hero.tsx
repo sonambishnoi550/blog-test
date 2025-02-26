@@ -41,31 +41,31 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                 readTime: 5,
                 description: "Stay ahead with AI-driven analytics, real-time news updates, and expert market research to make informed decisions.",
                 author: "Jerome Bell",
-                authorImage: "/assets/images/webp/jerome.webp",
+                authorImage: "/assets/images/webp/darrell.webp",
                 date: "31 Jan 2025",
                 image: "/assets/images/webp/real-time.webp",
                 isFeatured: true,
             },
             {
                 id: blogs.length + 2,
-                title: `Advanced Trading Platform ${blogs.length + 2}`,
+                title: `Advanced Trading Platform`,
                 category: "Productivity",
                 readTime: 5,
                 description: "Experience lightning-fast execution, customizable charts, and an intuitive interface designed for traders of all levels.",
                 author: "Eleanor Pena",
-                authorImage: "/assets/images/webp/eleanor.webp",
-                image: "/assets/images/webp/trading.webp",
+                authorImage: "/assets/images/webp/jerome.webp",
+                image: "/assets/images/webp/advanced-trading.webp",
                 isFeatured: true,
                 date: "31 Jan 2025",
             },
             {
                 id: blogs.length + 3,
-                title: `Mastering The Markets ${blogs.length + 3}`,
+                title: `Mastering The Markets`,
                 category: "Productivity",
                 readTime: 5,
                 description: "Mastering the markets involves developing a comprehensive understanding of how financial markets work, creating.",
                 author: "Wade Warren",
-                authorImage: "/assets/images/webp/wade.webp",
+                authorImage: "/assets/images/webp/eleanor.webp",
                 image: "/assets/images/webp/mastering.webp",
                 isFeatured: true,
                 date: "20 Dec 2024",
@@ -123,17 +123,17 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                     {filteredBlogs.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1140px] mx-auto justify-center">
                             {filteredBlogs.map((blog) => (
-                                <div onClick={() => handleCardClick(blog.title)} key={blog.id} className="bg-gradient-to-b cursor-pointer from-sky/0 to-sky/100 p-[1px] rounded-[10px] max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
+                                <div onClick={() => handleCardClick(blog.title)} key={blog.id} className="bg-gradient-to-b cursor-pointer from-sky/0 to-sky/100 p-[1px] rounded-[10px] lg:max-w-[364px] w-full sm:w-[80%] md:w-auto mx-auto">
                                     <div className="bg-black/90 text-white relative rounded-[10px] overflow-hidden">
                                         <p className="text-white text-base font-semibold leading-custom-lg absolute top-4 right-4">{blog.date}</p>
                                         <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
-                                        <div className="px-3 pb-[39px]">
-                                            <div className="flex gap-2 absolute top-[45%]">
-                                                <span className="border-sky border rounded-full bg-black leading-custom-lg hover:bg-sky hover:text-black text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
-                                                <span className="text-white/70 bg-light-black font-normal leading-custom-lg hover:bg-sky hover:text-black hover:border-sky text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px]">{blog.readTime} min read</span>
+                                        <div className="lg:px-5 px-3 pb-[39px]">
+                                            <div className="flex gap-[10px] -mt-9">
+                                                <span className="border-sky border rounded-full bg-black leading-custom-lg hover:bg-sky hover:text-black text-xs xl:px-[42px] px-8 py-[7px] flex items-center">{blog.category}</span>
+                                                <span className="text-white/70 bg-light-black font-normal leading-custom-lg whitespace-nowrap hover:bg-sky hover:text-black hover:border-sky text-sm border-white border  flex items-center rounded-full xl:px-[41px] px-8 py-[7px]">{blog.readTime} min read</span>
                                             </div>
-                                            <h3 className="text-xl font-semibold mt-12 mb-[10px]">{blog.title}</h3>
-                                            <p className="text-white/90 font-normal leading-custom-lg text-base">{blog.description}</p>
+                                            <h3 className="xl:text-xl text-lg font-semibold mt-6 mb-[10px]">{blog.title}</h3>
+                                            <p className="text-white/90 font-normal leading-custom-lg text-base lg:max-w-[323px]">{blog.description}</p>
                                             <div className="flex justify-between items-center">
                                                 <div className="flex items-center gap-[10px] mt-6">
                                                     <Image src={blog.authorImage} alt={blog.author} width={50} height={50} className="size-[50px] rounded-full" />
