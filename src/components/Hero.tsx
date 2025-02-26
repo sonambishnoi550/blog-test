@@ -98,7 +98,7 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
             <Image className="absolute right-0 bottom-[10%] max-w-[237px]" src="/assets/images/webp/hero-bottom-image.webp" alt="bottom-image" width={237} height={237} />
             <Header />
             <div className="container max-w-[1220px] mx-auto px-4 relative z-20">
-                <div className="flex flex-col xl:pt-[164px] pt-[140px]">
+                <div className="flex flex-col xl:pt-[64px] pt-10">
                     <h1 className="md:mt-[15px] lg:text-custom-6xl md:text-6xl text-4xl font-normal text-white lg:max-w-[700px] max-w-[718px] mx-auto text-center max-lg:leading-customMd">
                         Unlock Knowledge with Our <span className="text-sky font-bold">Featured Articles</span>
                     </h1>
@@ -129,11 +129,11 @@ const Hero: React.FC<HeroProps> = ({ pageIndex, onPageChange }) => {
                                         <Image src={blog.image} alt={blog.title} width={364} height={237} className="w-full h-[237px] object-cover rounded-md mb-4" />
                                         <div className="px-3 pb-[39px]">
                                             <div className="flex gap-2 absolute top-[45%]">
-                                                <span className="border-sky border rounded-full bg-black leading-custom-lg hover:border-white text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
-                                                <span className="text-white/70 bg-light-black font-normal leading-custom-lg text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px]">{blog.readTime} min read</span>
+                                                <span className="border-sky border rounded-full bg-black leading-custom-lg hover:bg-sky hover:text-black text-xs px-[42px] h-[37px] py-[3px] flex items-center">{blog.category}</span>
+                                                <span className="text-white/70 bg-light-black font-normal leading-custom-lg hover:bg-sky hover:text-black hover:border-sky text-sm border-white border h-[37px] flex items-center rounded-full px-[41px] py-[9.5px]">{blog.readTime} min read</span>
                                             </div>
                                             <h3 className="text-xl font-semibold mt-12 mb-[10px]">{blog.title}</h3>
-                                            <p className="text-white/70 font-normal leading-custom-lg text-base">{blog.description}</p>
+                                            <p className="text-white/90 font-normal leading-custom-lg text-base">{blog.description}</p>
                                             <div className="flex justify-between items-center">
                                                 <div className="flex items-center gap-[10px] mt-6">
                                                     <Image src={blog.authorImage} alt={blog.author} width={50} height={50} className="size-[50px] rounded-full" />

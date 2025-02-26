@@ -13,7 +13,7 @@ const Footer = () => {
 
                 <div className="flex flex-wrap sm:gap-6 gap-3 pb-[30px]">
                     {NAV_LINKS.map((link, index) => (
-                        <p key={index} className='text-base text-white font-semibold leading-custom-lg hover:text-sky transition-all duration-500'>{link}</p>
+                        <p key={index} className='text-base text-white cursor-pointer font-semibold leading-custom-lg hover:text-sky transition-all duration-500'>{link}</p>
                     ))}
                 </div>
 
