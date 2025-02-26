@@ -25,7 +25,11 @@ const Page = () => {
         <div>
             <Suspense>
                 <Hero pageIndex={pageIndex} onPageChange={handlePageChange} />
-            <Articles />
+            </Suspense>
+            <Suspense>
+                <Articles />
+            </Suspense>
+            <Suspense>
                 <Footer />
             </Suspense>
         </div>
